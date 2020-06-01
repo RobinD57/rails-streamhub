@@ -1,0 +1,54 @@
+.bgimg1 {
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591018846/streaming_b5auih.jpg");
+  height: 900px;
+}
+
+.bgimg2 {
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591020262/os-melhores-servicos-de-streaming-de-video-disponiveis-no-brasil_zih5as.jpg");
+  height: 800px;
+}
+
+.bgimg1, .bgimg2 {
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.color-box {
+  color: #777;
+  background-color: black;
+  text-align: center;
+  padding: 70px 100px;
+  text-align: justify;
+  }
+
+
+.btn-gradient {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 200px;
+  text-align: center;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#1B2944, #384E77);
+  transition: background 0.3s ease;
+  border: 1px solid #384E77;
+}
+
+.btn-gradient:hover {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 200px;
+  text-align: center;
+  background: linear-gradient(#1B2944, #384E77);
+  color: white;
+}
