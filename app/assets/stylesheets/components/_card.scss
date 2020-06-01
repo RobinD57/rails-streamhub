@@ -1,0 +1,117 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a:hover, a:visited, a:link, a:active{
+  text-decoration: none;
+}
+
+.main-card {
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  left: 40px;
+  top: 218px;
+
+  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_faker-440x248.jpg);
+  box-sizing: border-box;
+  border-radius: 5px !important;
+  transition: all 0.4s ease;
+}
+
+.main-card:hover {
+  box-shadow:-10px 10px 1px 0px rgba(92, 104, 168, .6) !important;
+
+}
+
+.overlay1 {
+  position: relative;
+  transition: all .5s ease;
+  opacity: 0;
+  background-color: rgba(27, 41, 68, .9);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  bottom: 68px;
+}
+
+.main-card:hover .overlay1 {
+  opacity: 1;
+
+}
+
+.main-card:hover .blur {
+  opacity:0;
+  transition: all .5s ease;
+}
+
+
+.blur {
+  position: relative;
+  width: 100%;
+  height: 67px;
+  top: 183px;
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 5px;
+}
+
+.elipse {
+  position: relative;
+  width: 54.15px;
+  height: 55.47px;
+  left: 10px;
+  top: 7px;
+  background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-50x50.png);
+  border-radius: 5px;
+}
+
+.streamer-name {
+  color: white;
+  position: relative;
+  width: 54.15px;
+  height: 55.47px;
+  left: 64px;
+  top: 19px;
+  opacity: .8;
+  font-size:medium;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#streamer-name-pop-up {
+  color: white;
+  opacity: .7;
+  font-size:medium;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#streamer-game-pop-up {
+  color: white;
+  opacity: .7;
+  font-size:medium;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#twitch-icon {
+  color: white;
+  opacity: .7;
+   font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.shadowed {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
