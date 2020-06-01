@@ -2,11 +2,7 @@ class Identity < ApplicationRecord
   belongs_to :user
   has_many :follows
 
-  def self.find_with_omniauth(auth)
-    find_by(uid: auth['uid'], provider: auth['provider'])
-  end
-
-  def self.create_with_omniauth(auth)
-    create(uid: auth['uid'], provider: auth['provider'])
+  def self.create_from_provider_data(auth, user)
+    where(provider: auth["provider"], uid: auth["uid"], user: user).first_or_create
   end
 end
