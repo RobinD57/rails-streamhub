@@ -1,0 +1,35 @@
+.outer-box-form {
+  background: #263445;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 50px;
+  padding: 80px;
+  height: 500px;
+  width: 500px;
+}
+
+.login-title {
+  text-align: center;
+  color: white;
+}
+
+.login-input {
+  background: #4d6b8e;
+  border: 1px solid #384E77;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.submit-login-button {
+  border-radius: 5px;
+  background-color: #384E77;
+  width: 100%;
+  color: white;
+  font-family: Roboto;
+}
+
+.submit-login-button:hover {
+  background-color: #384E77;
+  color: white;
+}
