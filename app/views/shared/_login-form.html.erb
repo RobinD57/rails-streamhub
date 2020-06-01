@@ -7,9 +7,11 @@
     <%= f.input :email,
                 required: false,
                 autofocus: true,
+                label: false,
                 input_html: { class: "login-input", placeholder: "email", autocomplete: "email" } %>
     <%= f.input :password,
                 required: false,
+                label: false,
                 input_html: { class: "login-input", placeholder: "password", autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
