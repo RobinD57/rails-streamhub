@@ -8,16 +8,14 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .main-card {
-  position: absolute;
+  position: relative;
   width: 350px;
   height: 250px;
-  left: 40px;
-  top: 218px;
-
-  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_faker-440x248.jpg);
+  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_loltyler1-440x248.jpg);
   box-sizing: border-box;
   border-radius: 5px !important;
   transition: all 0.4s ease;
+  margin-top: 40px;
 }
 
 .main-card:hover {
@@ -27,13 +25,13 @@ a:hover, a:visited, a:link, a:active{
 
 .overlay1 {
   position: relative;
-  transition: all .5s ease;
+  transition: all .7s ease;
   opacity: 0;
   background-color: rgba(27, 41, 68, .9);
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  bottom: 68px;
+  bottom: 75px;
 }
 
 .main-card:hover .overlay1 {
@@ -43,7 +41,37 @@ a:hover, a:visited, a:link, a:active{
 
 .main-card:hover .blur {
   opacity:0;
-  transition: all .5s ease;
+  transition: all .7s ease;
+}
+
+
+.overlay2 {
+  position: relative;
+  transition: all .7s ease;
+  opacity: 0;
+  border-radius: 5px !important;
+  bottom: 300px;
+  left: 200px;
+  z-index:1;
+  display:none;
+  height: 100%;
+  width: 50%;
+}
+
+.overlay2 img {
+  position: relative;
+  height: 50%;
+  width: 70%;
+  object-fit: contain;
+  transition: all .7s ease;
+  border-radius: 5px !important;
+  opacity: .9;
+}
+
+.main-card:hover .overlay2 {
+  opacity: 1;
+  display:block;
+  transition: all .7s ease-in-out;
 }
 
 
@@ -58,10 +86,11 @@ a:hover, a:visited, a:link, a:active{
 
 .elipse {
   position: relative;
-  width: 54.15px;
-  height: 55.47px;
+  width: 44.15px;
+  height: 45.47px;
   left: 10px;
-  top: 7px;
+  top: 10px;
+  background-size: auto;
   background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-50x50.png);
   border-radius: 5px;
 }
@@ -72,7 +101,7 @@ a:hover, a:visited, a:link, a:active{
   width: 54.15px;
   height: 55.47px;
   left: 64px;
-  top: 19px;
+  top: 14px;
   opacity: .8;
   font-size:medium;
   font-family: Roboto;
@@ -80,7 +109,9 @@ a:hover, a:visited, a:link, a:active{
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 900;
 }
+
 
 #streamer-name-pop-up {
   color: white;
@@ -89,8 +120,9 @@ a:hover, a:visited, a:link, a:active{
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
+  margin-top: 10px;
 }
 
 #streamer-game-pop-up {
@@ -100,18 +132,38 @@ a:hover, a:visited, a:link, a:active{
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
+
 }
 
-#twitch-icon {
+.provider-icon {
   color: white;
   opacity: .7;
-   font-weight: bold;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 68px;
   line-height: 21px;
+  padding-top: 50px;
+  padding-right: 60px;
 }
 
 .shadowed {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.box-shadow {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, .5) !important;
+}
+
+.deep-shadow {
+  text-shadow:
+    -0.0075em 0.0075em 0 mix(#fff, grey, 94%),
+    0.005em 0.005em 0 mix(#fff, grey, 60%),
+    0.01em 0.01em 0 mix(#fff, grey, 62%),
+    0.015em 0.015em mix(#fff, grey, 64%),
+    0.02em 0.02em 0 mix(#fff, grey, 66%),
+    0.025em 0.025em 0 mix(#fff, grey, 68%),
+    0.03em 0.03em 0 mix(#fff, grey, 70%),
+    0.035em 0.035em 0 mix(#fff, grey, 72%);
+}
+
