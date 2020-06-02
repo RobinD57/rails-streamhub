@@ -5,11 +5,11 @@ class User < ApplicationRecord
   # :lockable, :timeoutable, :trackable, :confirmable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer)
-  has_many :identities
+  has_many :identities, dependent: :destroy
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
   # validates :username, presence: true
 
-    def self.find_for_oauth(auth, signed_in_resource = nil)
+  def self.find_for_oauth(auth, signed_in_resource = nil)
 
     # Get the identity and user if they exist
     identity = Identity.find_for_oauth(auth)
@@ -34,7 +34,7 @@ class User < ApplicationRecord
       if user.nil?
         user = User.create(
           username: auth.info["name"] || auth.uid,
-          email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
+          email: email ? email : auth.info["email"], # "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
           password: Devise.friendly_token[0,20]
         )
       end
@@ -52,24 +52,3 @@ class User < ApplicationRecord
     self.email && self.email !~ TEMP_EMAIL_REGEX
   end
 end
-
-
-=begin
-  def self.from_omniauth(auth)
-    user = where(email: auth["email"]).first_or_create do |user|
-      user.email = auth.info["email"]
-      user.password = Devise.friendly_token[0, 20]
-      user.username = auth.info["name"]
-    end # block for pre-filling rest of user creation infromation
-    Identity.create_from_provider_data(auth, user)
-  end
-
-  def self.new_with_session(params, session) # need to make it work for all sign ups
-    super.tap do |user|
-      if data = session["devise.twitch_data"] && session["devise.twitch_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
-      end
-    end
-  end
-=end
-# above is old code for now!
