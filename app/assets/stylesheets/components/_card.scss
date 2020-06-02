@@ -11,11 +11,12 @@ a:hover, a:visited, a:link, a:active{
   position: relative;
   width: 420px;
   height: 280px;
-  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_dopa24-420x280.jpg);
+  background: url(https://res.cloudinary.com/duueqba0z/image/upload/v1591110516/live_user_dopa24-440x248_w1eau6.jpg);
+  object-fit: fill;
   border-radius: 5px !important;
   transition: all 0.4s ease;
   margin-top: 40px;
-}
+};
 
 
 .main-card:hover {
