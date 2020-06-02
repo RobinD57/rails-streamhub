@@ -1,5 +1,5 @@
 .main-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -9,10 +9,9 @@ a:hover, a:visited, a:link, a:active{
 
 .main-card {
   position: relative;
-  width: 350px;
-  height: 250px;
-  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_dopa24-440x248.jpg);
-  box-sizing: border-box;
+  width: 420px;
+  height: 280px;
+  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_dopa24-420x280.jpg);
   border-radius: 5px !important;
   transition: all 0.4s ease;
   margin-top: 40px;
@@ -20,14 +19,14 @@ a:hover, a:visited, a:link, a:active{
 
 
 .main-card:hover {
-  box-shadow:-10px 10px 1px 0px rgba(92, 104, 168, .6) !important;
+  box-shadow:-10px 10px 1px 0px rgba(0, 0, 0, .5) !important;
 
 }
 
 .overlay1 {
   position: relative;
   opacity: 0;
-  background-color: rgba(27, 41, 68, .85);
+  background-color: rgba(56, 78, 119, 0.9);
   border-radius: 5px;
   width: 100%;
   height: 100%;
@@ -63,9 +62,9 @@ a:hover, a:visited, a:link, a:active{
   width: 55%;
   object-fit: contain;
   border-radius: 10px !important;
-  opacity: 1;
-  bottom: 200px;
-  left: 242px;
+  opacity: .95;
+  bottom: 210px;
+  left: 292px;
 }
 
 .main-card:hover .overlay2 {
@@ -76,13 +75,13 @@ a:hover, a:visited, a:link, a:active{
 
 .viewer-count {
   position: relative;
-  color: white;
+  color: #D7D7D7;
   font-size: 10px;
   opacity: .8;
 }
 
 #views {
-  color: white;
+  color: #D7D7D7;
   font-size: 10px;
   opacity: .8;
 }
@@ -91,7 +90,7 @@ a:hover, a:visited, a:link, a:active{
   position: relative;
   width: 100%;
   height: 67px;
-  top: 148px;
+  top: 180px;
   background: rgba(196, 196, 196, 0.4);
   border-radius: 5px;
 }
@@ -126,7 +125,7 @@ a:hover, a:visited, a:link, a:active{
 
 
 #streamer-name-pop-up {
-  color: white;
+  color: #D7D7D7;
   opacity: 1;
   font-size:medium;
   font-family: Roboto;
@@ -134,12 +133,12 @@ a:hover, a:visited, a:link, a:active{
   font-weight: bold;
   font-size: 20px;
   line-height: 21px;
-  margin-top: 40px;
+  margin-top: 60px;
   padding-left: 15px;
 }
 
 #streamer-game-pop-up {
-  color: white;
+  color: #D7D7D7;
   opacity: 1;
   font-size:medium;
   font-family: Roboto;
@@ -153,7 +152,7 @@ a:hover, a:visited, a:link, a:active{
 
 .provider-icon {
   position: relative;
-  color: white;
+  color: #D7D7D7;
   opacity: .8;
   font-weight: bold;
   font-size: 76px;
@@ -168,7 +167,7 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .box-shadow {
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, .5) !important;
+  box-shadow: -2px 0px 5px rgba(7, 23, 79, 0.5) !important;
 }
 
 .deep-shadow {
