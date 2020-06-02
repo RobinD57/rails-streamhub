@@ -1,5 +1,5 @@
 .main-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -8,36 +8,36 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .main-card {
-  position: absolute;
-  width: 350px;
-  height: 250px;
-  left: 40px;
-  top: 218px;
-
-  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_faker-440x248.jpg);
-  box-sizing: border-box;
+  position: relative;
+  width: 420px;
+  height: 280px;
+  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_dopa24-420x280.jpg);
   border-radius: 5px !important;
   transition: all 0.4s ease;
+  margin-top: 40px;
 }
 
+
 .main-card:hover {
-  box-shadow:-10px 10px 1px 0px rgba(92, 104, 168, .6) !important;
+  box-shadow:-10px 10px 1px 0px rgba(0, 24, 48, .5) !important;
 
 }
 
 .overlay1 {
   position: relative;
-  transition: all .5s ease;
   opacity: 0;
-  background-color: rgba(27, 41, 68, .9);
+  background-color: rgba(56, 78, 119, 0.9);
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  bottom: 68px;
+  bottom: 102px;
+  visibility: none;
 }
 
 .main-card:hover .overlay1 {
   opacity: 1;
+  visibility: visible;
+  transition: all .5s ease;
 
 }
 
@@ -46,22 +46,62 @@ a:hover, a:visited, a:link, a:active{
   transition: all .5s ease;
 }
 
+.overlay2 {
+  position: relative;
+  opacity: 0;
+  border-radius: 5px !important;
+  z-index:1;
+  visibility: hidden;
+  height: 100%;
+  width: 50%;
+}
+
+.overlay2 img {
+  position: relative;
+  height: 35%;
+  width: 55%;
+  object-fit: contain;
+  border-radius: 10px !important;
+  opacity: .95;
+  bottom: 210px;
+  left: 292px;
+}
+
+.main-card:hover .overlay2 {
+  opacity: 1;
+  visibility: visible;
+  transition: all .5s ease;
+}
+
+.viewer-count {
+  position: relative;
+  color: #D7D7D7;
+  font-size: 10px;
+  opacity: .8;
+}
+
+#views {
+  color: #D7D7D7;
+  font-size: 10px;
+  opacity: .8;
+}
 
 .blur {
   position: relative;
   width: 100%;
   height: 67px;
-  top: 183px;
+  top: 180px;
   background: rgba(196, 196, 196, 0.4);
   border-radius: 5px;
 }
 
 .elipse {
   position: relative;
-  width: 54.15px;
-  height: 55.47px;
+  width: 44.15px;
+  height: 45.47px;
   left: 10px;
-  top: 7px;
+  top: 10px;
+  background-size: auto;
   background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-50x50.png);
   border-radius: 5px;
 }
@@ -72,46 +112,73 @@ a:hover, a:visited, a:link, a:active{
   width: 54.15px;
   height: 55.47px;
   left: 64px;
-  top: 19px;
-  opacity: .8;
-  font-size:medium;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-#streamer-name-pop-up {
-  color: white;
+  top: 14px;
   opacity: .7;
   font-size:medium;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 900;
+}
+
+
+#streamer-name-pop-up {
+  color: #D7D7D7;
+  opacity: 1;
+  font-size:medium;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 21px;
+  margin-top: 60px;
+  padding-left: 15px;
 }
 
 #streamer-game-pop-up {
-  color: white;
-  opacity: .7;
+  color: #D7D7D7;
+  opacity: 1;
   font-size:medium;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 21px;
+  padding-left: 15px;
+  padding-top: 0px;
 }
 
-#twitch-icon {
-  color: white;
-  opacity: .7;
-   font-weight: bold;
-  font-size: 18px;
+.provider-icon {
+  position: relative;
+  color: #D7D7D7;
+  opacity: .8;
+  font-weight: bold;
+  font-size: 76px;
   line-height: 21px;
+  padding-top: 50px;
+  top: 50px;
+
 }
 
 .shadowed {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.box-shadow {
+  box-shadow: -2px 0px 5px rgba(7, 23, 79, 0.5) !important;
+}
+
+.deep-shadow {
+  text-shadow:
+    -0.0075em 0.0075em 0 mix(#fff, grey, 94%),
+    0.005em 0.005em 0 mix(#fff, grey, 60%),
+    0.01em 0.01em 0 mix(#fff, grey, 62%),
+    0.015em 0.015em mix(#fff, grey, 64%),
+    0.02em 0.02em 0 mix(#fff, grey, 66%),
+    0.025em 0.025em 0 mix(#fff, grey, 68%),
+    0.03em 0.03em 0 mix(#fff, grey, 70%),
+    0.035em 0.035em 0 mix(#fff, grey, 72%);
+}
+

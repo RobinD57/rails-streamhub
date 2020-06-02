@@ -1,16 +1,26 @@
+body, html {
+  height: 100%;
+}
+
 .bgimg1 {
   /* The image used */
-  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591018846/streaming_b5auih.jpg");
-  height: 900px;
+  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591089252/background10_jfb5ma.jpg");
+  height: 100%;
 }
 
 .bgimg2 {
   /* The image used */
-  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591020262/os-melhores-servicos-de-streaming-de-video-disponiveis-no-brasil_zih5as.jpg");
-  height: 800px;
+  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591089253/background8_zqnmma.jpg");
+  height: 50%;
 }
 
-.bgimg1, .bgimg2 {
+.bgimg3 {
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591089255/background1_iygssz.jpg");
+  height: 70%;
+}
+
+.bgimg1, .bgimg2, .bgimg3 {
   /* Create the parallax scrolling effect */
   position: relative;
   background-attachment: fixed;
@@ -19,36 +29,35 @@
   background-size: cover;
 }
 
-.color-box {
-  color: #777;
+.color-box1 {
+  color:#fff;
   background-color: black;
   text-align: center;
   padding: 70px 100px;
   text-align: justify;
   }
 
+  .color-box2 {
+  color: #fff;
+  background-color: black;
+  text-align: right;
+  padding: 70px 100px;
+  text-align: justify;
+  }
 
-.btn-gradient {
+.caption {
   position: absolute;
-  left: 45%;
+  left: 0;
   top: 50%;
-  width: 200px;
+  width: 100%;
   text-align: center;
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#1B2944, #384E77);
-  transition: background 0.3s ease;
-  border: 1px solid #384E77;
+  color: #000;
 }
 
-.btn-gradient:hover {
-  position: absolute;
-  left: 45%;
-  top: 50%;
-  width: 200px;
-  text-align: center;
-  background: linear-gradient(#1B2944, #384E77);
-  color: white;
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
 }
