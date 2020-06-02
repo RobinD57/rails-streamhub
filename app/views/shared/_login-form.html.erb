@@ -27,5 +27,18 @@
   <%= link_to "Forgot your password?", new_password_path(resource_name), {class: "forgotpass-devise-link"} %>
 </div>
 
+<div class="d-flex justify-content-center">
+  <hr/>
+</div>
+
+
+  <%= link_to user_twitch_omniauth_authorize_path do %>
+    <div class="twitch-button">
+      <%= image_tag('twitch-button-low.png', style: 'height: auto; width: 100%;') %>
+    </div>
+  <% end %>
+
 
 </div>
+
+
