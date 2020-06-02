@@ -33,8 +33,10 @@ gem 'devise'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem "omniauth"
 gem 'omniauth-twitch'
 gem 'omniauth-mixer'
+gem "activerecord-session_store"
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
