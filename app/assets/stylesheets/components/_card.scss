@@ -11,12 +11,13 @@ a:hover, a:visited, a:link, a:active{
   position: relative;
   width: 350px;
   height: 250px;
-  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_loltyler1-440x248.jpg);
+  background: url(https://static-cdn.jtvnw.net/previews-ttv/live_user_dopa24-440x248.jpg);
   box-sizing: border-box;
   border-radius: 5px !important;
   transition: all 0.4s ease;
   margin-top: 40px;
 }
+
 
 .main-card:hover {
   box-shadow:-10px 10px 1px 0px rgba(92, 104, 168, .6) !important;
@@ -25,61 +26,72 @@ a:hover, a:visited, a:link, a:active{
 
 .overlay1 {
   position: relative;
-  transition: all .7s ease;
   opacity: 0;
-  background-color: rgba(27, 41, 68, .9);
+  background-color: rgba(27, 41, 68, .85);
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  bottom: 75px;
+  bottom: 100px;
+  visibility: none;
 }
 
 .main-card:hover .overlay1 {
   opacity: 1;
+  visibility: visible;
+  transition: all .5s ease;
 
 }
 
 .main-card:hover .blur {
   opacity:0;
-  transition: all .7s ease;
+  transition: all .5s ease;
 }
-
 
 .overlay2 {
   position: relative;
-  transition: all .7s ease;
   opacity: 0;
   border-radius: 5px !important;
-  bottom: 300px;
-  left: 200px;
   z-index:1;
-  display:none;
+  visibility: hidden;
   height: 100%;
   width: 50%;
 }
 
 .overlay2 img {
   position: relative;
-  height: 50%;
-  width: 70%;
+  height: 35%;
+  width: 55%;
   object-fit: contain;
-  transition: all .7s ease;
-  border-radius: 5px !important;
-  opacity: .9;
+  border-radius: 10px !important;
+  opacity: 1;
+  bottom: 200px;
+  left: 242px;
 }
 
 .main-card:hover .overlay2 {
   opacity: 1;
-  display:block;
-  transition: all .7s ease-in-out;
+  visibility: visible;
+  transition: all .5s ease;
 }
 
+.viewer-count {
+  position: relative;
+  color: white;
+  font-size: 10px;
+  opacity: .8;
+}
+
+#views {
+  color: white;
+  font-size: 10px;
+  opacity: .8;
+}
 
 .blur {
   position: relative;
   width: 100%;
   height: 67px;
-  top: 183px;
+  top: 148px;
   background: rgba(196, 196, 196, 0.4);
   border-radius: 5px;
 }
@@ -102,9 +114,9 @@ a:hover, a:visited, a:link, a:active{
   height: 55.47px;
   left: 64px;
   top: 14px;
-  opacity: .8;
+  opacity: .7;
   font-size:medium;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -115,36 +127,40 @@ a:hover, a:visited, a:link, a:active{
 
 #streamer-name-pop-up {
   color: white;
-  opacity: .7;
+  opacity: 1;
   font-size:medium;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 21px;
-  margin-top: 10px;
+  margin-top: 40px;
+  padding-left: 15px;
 }
 
 #streamer-game-pop-up {
   color: white;
-  opacity: .7;
+  opacity: 1;
   font-size:medium;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 21px;
-
+  padding-left: 15px;
+  padding-top: 0px;
 }
 
 .provider-icon {
+  position: relative;
   color: white;
-  opacity: .7;
+  opacity: .8;
   font-weight: bold;
-  font-size: 68px;
+  font-size: 76px;
   line-height: 21px;
   padding-top: 50px;
-  padding-right: 60px;
+  top: 50px;
+
 }
 
 .shadowed {
