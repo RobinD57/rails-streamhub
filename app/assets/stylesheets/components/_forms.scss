@@ -1,10 +1,52 @@
-.outer-box-form {
+.outer-box-form-home {
   background: #263445;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin: 50px;
-  padding: 40px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  height: 520px;
+  width: 400px;
+}
+
+.outer-box-form-login {
+  background: #263445;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  height: 450px;
+  width: 400px;
+}
+
+.outer-box-form-signup {
+  background: #263445;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
   height: 500px;
+  width: 400px;
+}
+
+.outer-box-form-forgotpass {
+  background: #263445;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  height: 300px;
   width: 400px;
 }
 
@@ -63,3 +105,13 @@ hr {
   text-align: center;
 }
 
+.stream-button {
+  min-height: 30px;
+  display: block;
+  padding-bottom: 10px;
+
+  img {
+    width: 100%;
+    object-fit: contains;
+  }
+}
