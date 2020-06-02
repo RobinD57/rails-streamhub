@@ -32,8 +32,11 @@
 </div>
 
 
-  <%= link_to user_twitch_omniauth_authorize_path, class: "twitch-button" do %>
-      <%= image_tag('twitch-button-low.png') %>
+  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-twitch.png') %>
+  <% end %>
+  <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-mixer.png') %>
   <% end %>
 
 </div>
