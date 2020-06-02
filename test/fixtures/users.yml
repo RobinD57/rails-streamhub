@@ -1,0 +1,7 @@
+george:
+  email: "george@tirol.com"
+  encrypted_password: "qwe123"
+
+peter:
+  email: "peter@test.com"
+  encrypted_password: "qwe123"
