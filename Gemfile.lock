@@ -272,6 +272,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  omniauth
   omniauth-mixer
   omniauth-twitch
   pg (>= 0.18, < 2.0)
