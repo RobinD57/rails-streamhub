@@ -3,14 +3,29 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin: 50px;
-  padding: 80px;
+  padding: 60px;
   height: 500px;
-  width: 500px;
+  width: 400px;
+}
+
+.form-inputs {
+  color: white;
+  font-family: Montserrat;
 }
 
 .login-title {
   text-align: center;
   color: white;
+}
+
+.login-title h6{
+  font-family: Montserrat;
+  font-weight: 200;
+}
+
+.form-logo {
+  width: 300px;
+  text-align: center;
 }
 
 .login-input {
@@ -26,10 +41,13 @@
   background-color: #384E77;
   width: 100%;
   color: white;
-  font-family: Roboto;
+  font-family: Montserrat;
 }
 
 .submit-login-button:hover {
-  background-color: #384E77;
+  background-color: #5C68A8;
   color: white;
+  font-family: Montserrat;
 }
+
+
