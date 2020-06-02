@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<div class="outer-box-form-signup">
+  <div class="login-title">
+    <h2>Register</h2>
+  </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -7,19 +10,37 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                label: false,
+                input_html: { class: "login-input", placeholder: "email", autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                label: false,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { class: "login-input", placeholder: "password", autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                input_html: { class: "login-input", placeholder: "confirm password", autocomplete: "new-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", { class: "submit-login-button" } %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="d-flex justify-content-between">
+    <%= link_to "Log in", new_session_path(resource_name), {class: "login-devise-link"} %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+  <hr/>
+</div>
+
+  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-twitch.png') %>
+  <% end %>
+  <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-mixer.png') %>
+  <% end %>
+
+</div>

@@ -1,4 +1,4 @@
-<div class="outer-box-form">
+<div class="outer-box-form-signup">
   <div class="login-title">
     <h2>Log in</h2>
   </div>
@@ -22,6 +22,21 @@
   </div>
 <% end %>
 
-    <%= render "devise/shared/links" %>
+  <div class="d-flex justify-content-between">
+    <%= link_to "Sign up", new_registration_path(resource_name), {class: "signup-devise-link"} %>
+    <%= link_to "Forgot your password?", new_password_path(resource_name), {class: "forgotpass-devise-link"} %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <hr/>
+  </div>
+
+
+  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-twitch.png') %>
+  <% end %>
+  <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
+      <%= image_tag('button-mixer.png') %>
+  <% end %>
 
 </div>
