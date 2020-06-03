@@ -6,11 +6,24 @@ $( ".navbar-toggler").on( "click", function() {
   })
 };
 
-const scroll = () => {
-  $ (document).on("scroll", function() {
-    $(".navbar-main")
-  })
+
+const scrollFunction = () => {
+ $(document).on("scroll",function(){
+  if ($(document).scrollTop() > 100){
+    $(".navbar-main").addClass("shrink");
+    $("#logo-big").hide();
+    $("#logo-small").show();
+  }else {
+      $(".navbar-main").removeClass("shrink");
+      $("#logo-big").show();
+      $("#logo-small").hide();
+    }
+  });
+}
+
+const scrollFinal = () => {
+  window.onscroll = function() {scrollFunction()};
 }
 
 export { morphLogo };
-export { scroll };
+export { scrollFinal };
