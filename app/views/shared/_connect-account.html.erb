@@ -13,7 +13,9 @@
       <% if has_provider?(current_user, "twitch") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
+        <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
         <button type="button" class="btn btn-primary">connect</button>
+        <% end %>
       <% end %>
     </div>
 
@@ -22,7 +24,9 @@
       <% if has_provider?(current_user, "mixer") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
+        <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
         <button type="button" class="btn btn-primary">connect</button>
+        <% end %>
       <% end %>
     </div>
 
@@ -31,7 +35,9 @@
       <% if has_provider?(current_user, "youtube") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
+        <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
         <button type="button" class="btn btn-primary">connect</button>
+        <% end %>
       <% end %>
     </div>
 
@@ -40,9 +46,12 @@
       <% if has_provider?(current_user, "facebook") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
+        <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
         <button type="button" class="btn btn-primary">connect</button>
+        <% end %>
       <% end %>
     </div>
   </div>
+
 </div>
 
