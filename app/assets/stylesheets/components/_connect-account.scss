@@ -7,7 +7,7 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
-  height: 520px;
+  height: 580px;
   width: 400px;
 }
 
@@ -21,6 +21,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
+}
+
+.fa-check {
+  color: #C4C4C4;
 }
 
 .btn-primary {
@@ -28,7 +33,7 @@
   color: #C4C4C4;
   border-color: #384E77;
   height: 40px;
-  width: 150px;
+  width: 170px;
   font-family: Montserrat;
   font-weight: 400;
 }
@@ -38,7 +43,7 @@
   color: white;
   border-color: #384E77;
   height: 40px;
-  width: 150px;
+  width: 170px;
   font-family: Montserrat;
   font-weight: 400;
 }
@@ -48,7 +53,7 @@
   color: white;
   border-color: #384E77;
   height: 40px;
-  width: 150px;
+  width: 170px;
   font-family: Montserrat;
   font-weight: 400;
 }
@@ -58,7 +63,7 @@
   color: white;
   border-color: #384E77;
   height: 40px;
-  width: 150px;
+  width: 170px;
   font-family: Montserrat;
   font-weight: 400;
 }
