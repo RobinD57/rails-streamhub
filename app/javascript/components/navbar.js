@@ -12,7 +12,7 @@ const scrollFunction = () => {
   if ($(document).scrollTop() > 100){
     $(".navbar-main").addClass("shrink");
     $("#logo-big").hide();
-    $("#logo-small").show();
+    //$("#logo-small").show();
   }else {
       $(".navbar-main").removeClass("shrink");
       $("#logo-big").show();
