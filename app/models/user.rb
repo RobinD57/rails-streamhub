@@ -55,7 +55,6 @@ class User < ApplicationRecord
   def get_follows
     idents = current_user.identities
     data = idents.each { |ident| FollowRetreiverService.new(identity: ident).perform }
-    # use that data for creating follows
   end
   # get follows => iterate => load follow for each identity => save them in follows db table
   # load follows
