@@ -1,5 +1,7 @@
+
+
 const morphLogo = () => {
-$( "#settings" ).on( "click", function() {
+$( ".navbar-toggler").on( "click", function() {
   $( "#arrow" ).toggle();
   })
 };
