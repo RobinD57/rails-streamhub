@@ -5,6 +5,8 @@ class TwitchReceiveStreamerDetailsService
   attr_reader :twitch_follows
 
   def initialize(params = {})
+    binding.pry
+    @identity = params["identity"]
     @twitch_follows = params["data"]
   end
 
