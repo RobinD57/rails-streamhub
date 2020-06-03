@@ -51,4 +51,11 @@ class User < ApplicationRecord
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
   end
+
+  def get_follows
+    idents = current_user.identities
+    data = idents.each { |ident| FollowRetreiverService.new(identity: ident).perform }
+  end
+  # get follows => iterate => load follow for each identity => save them in follows db table
+  # load follows
 end

@@ -1,0 +1,37 @@
+<div class="outer-box-auth">
+  <div class="auth-title">
+    <%= link_to  root_path do  %>
+    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
+    <% end %>
+    <h5>Link your accounts</h5>
+  </div>
+
+  <div class="social-icons">
+    <div class="logo-button">
+      <%= image_tag('twitchlogo-s.png') %>
+      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+    </div>
+
+    <div class="logo-button">
+      <%= image_tag('mixerlogo-s.png') %>
+      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+    </div>
+
+    <div class="logo-button">
+      <%= image_tag('youtubelogo-s.png') %>
+      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+    </div>
+
+    <div class="logo-button">
+      <%= image_tag('facebooklogo-s.png') %>
+      <button type="button" class="btn btn-primary">connect</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- TO DO: write if statement for the "tick" (<i class="fas fa-check"></i>), so IF the account
+  is connected, it shows a button with the text "connected" and the tick mark. ELSE, it shows
+  the button text "connect" and no tick. -->
+
+<!-- BUTTON FOR NO CONNECTION: <button type="button" class="btn btn-primary">connect</button> -->
