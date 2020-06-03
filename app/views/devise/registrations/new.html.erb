@@ -40,10 +40,10 @@
 </div>
 
   <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
-      <%= image_tag('button-twitch.png') %>
+    <div class='signin-button'><i class="fab fa-twitch"> </i> Sign in with Twitch</div>
   <% end %>
   <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
-      <%= image_tag('button-mixer.png') %>
+    <div class='signin-button'><i class="fab fa-mixer"> </i> Sign in with Mixer</div>
   <% end %>
 
 </div>
