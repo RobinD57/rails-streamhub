@@ -18,7 +18,7 @@ class MixerTransformService
         stream_current_viewers: follow["type"]["viewersCurrent"],
         stream_display_name: follow["name"],
         stream_name: follow["token"],
-        stream_thumbnail: follow["bannerUrl"],
+        stream_thumbnail: follow["bannerUrl"], # 440x250 needed
         online_status: follow["online"]
       }
     end
