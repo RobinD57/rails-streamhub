@@ -2,11 +2,15 @@
   justify-content: start;
   background: transparent;
   font-size: 18px;
-  height: 110px;
+  height: 120px;
   border-bottom: 1px solid rgba(215, 215, 215, 0.15) !important;
   z-index: 1;
   vertical-align: middle;
   margin: 0 auto;
+  filter: none;
+  transition:all 0.4s ease-in-out;
+  -webkit-transition:all 0.4s ease-in-out;
+  -moz-transition:all 0.4s ease-in-out;
 button {
   outline: none;
   }
@@ -26,14 +30,10 @@ button {
   }
 }
 
-#blurrycontent {
-  padding: 1rem;
-  top: 0; left: 0;
-  width: 100%;
-  height: 5rem;
-  overflow: hidden;
-  position: fixed;
-  filter: blur(4px);
+.shrink {
+  height: 70px !important;
+  padding-bottom: 10px !important;
+  background: rgba(196, 196, 196, .1) !important;
 }
 
 .navbar-main .navbar-collapse {
@@ -56,13 +56,16 @@ button {
 
 #logo-small {
   display: none;
-  font-size: 60px;
-  margin-left: 150px;
-  margin-top: 20px;
+  font-size: 40px;
+  margin-left: 155px;
+  margin-top: 35px;
+  font-weight:bold;
+  color: white;
 }
 
 #arrow {
   display:none;
+  color: white;
 }
 
 #right-links {
@@ -85,7 +88,7 @@ button {
 }
 
 .navbar i {
-  color: #D7D7D7;
+  color: white;
   text-decoration: none;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }

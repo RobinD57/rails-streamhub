@@ -9,8 +9,8 @@ a:hover, a:visited, a:link, a:active{
 
 .main-card {
   position: relative;
-  width: 420px;
-  height: 280px;
+  width: 450px;
+  height: 300px;
   background: url(https://res.cloudinary.com/duueqba0z/image/upload/v1591110516/live_user_dopa24-440x248_w1eau6.jpg);
   object-fit: fill;
   border-radius: 5px !important;
@@ -31,7 +31,7 @@ a:hover, a:visited, a:link, a:active{
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  bottom: 102px;
+  bottom: 110px;
   visibility: none;
 }
 
@@ -42,7 +42,7 @@ a:hover, a:visited, a:link, a:active{
 
 }
 
-.main-card:hover .blur {
+.main-card:hover .blur{
   opacity:0;
   transition: all .5s ease;
 }
@@ -64,8 +64,8 @@ a:hover, a:visited, a:link, a:active{
   object-fit: contain;
   border-radius: 10px !important;
   opacity: .95;
-  bottom: 210px;
-  left: 292px;
+  bottom: 240px;
+  left: 320px;
 }
 
 .main-card:hover .overlay2 {
@@ -90,8 +90,8 @@ a:hover, a:visited, a:link, a:active{
 .blur {
   position: relative;
   width: 100%;
-  height: 67px;
-  top: 180px;
+  height: 25%;
+  top: 190px;
   background: rgba(196, 196, 196, 0.4);
   border-radius: 5px;
 }
@@ -101,7 +101,7 @@ a:hover, a:visited, a:link, a:active{
   width: 44.15px;
   height: 45.47px;
   left: 10px;
-  top: 10px;
+  top: 15px;
   background-size: auto;
   background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-50x50.png);
   border-radius: 5px;
@@ -113,7 +113,7 @@ a:hover, a:visited, a:link, a:active{
   width: 54.15px;
   height: 55.47px;
   left: 64px;
-  top: 14px;
+  top: 15px;
   opacity: .7;
   font-size:medium;
   font-family: "Roboto";
