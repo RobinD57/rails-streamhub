@@ -2,6 +2,8 @@ class FollowsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+    @follows = Follow.all
+
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
 

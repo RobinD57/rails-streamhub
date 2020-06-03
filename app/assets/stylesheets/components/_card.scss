@@ -11,8 +11,7 @@ a:hover, a:visited, a:link, a:active{
   position: relative;
   width: 450px;
   height: 300px;
-  background: url(https://res.cloudinary.com/duueqba0z/image/upload/v1591110516/live_user_dopa24-440x248_w1eau6.jpg);
-  object-fit: fill;
+  background-size: cover;
   border-radius: 5px !important;
   transition: all 0.4s ease;
   margin-top: 40px;
