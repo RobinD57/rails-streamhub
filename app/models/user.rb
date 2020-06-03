@@ -53,8 +53,18 @@ class User < ApplicationRecord
   end
 
   def get_follows
-    idents = current_user.identities
-    data = idents.each { |ident| FollowRetreiverService.new(identity: ident).perform }
+    idents = self.identities
+    follows_array = idents.map do |ident|
+      follow_retreiver_service = FollowRetreiverService.new(identity: ident)
+      follow_attributes = follow_retreiver_service.perform
+      follow_attributes.map do |attr|
+       follow = Follow.new(attr)
+       follow.user = self
+       follow.save!
+       follow
+      end
+    end
+    return follows_array.flatten
   end
   # get follows => iterate => load follow for each identity => save them in follows db table
   # load follows

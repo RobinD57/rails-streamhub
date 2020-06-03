@@ -12,6 +12,6 @@ class FollowsController < ApplicationController
   def create
     user = User.find(current_user.id)
     user_data = user.get_follows
-    @follow = user_data.each { |data| Follow.create(data) }
+    @follow = user_data.each { |data| Follow.create!(data) }
   end
 end

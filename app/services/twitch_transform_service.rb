@@ -1,13 +1,14 @@
 class TwitchTransformService
 
   def initialize(params = {})
-    @twitch_follow_details = params[:follow_details]
+    @twitch_follow_details = params.twitch_follows
   end
 
 
   def perform
     is_online?
-    @twitch_follow_details.each { |follow| build_result_hash(follow) }
+    follow_attributes = @twitch_follow_details.map { |follow| build_result_hash(follow) }
+    return follow_attributes
   end
 
   private
@@ -21,7 +22,6 @@ class TwitchTransformService
         stream_thumbnail: follow[:thumbnail_url].gsub("{width}", "450").gsub("{height}", "300"),
         online_status: true # follow[:type] == "live" ? true : false
       }
-    end
   end
 
   def is_online?

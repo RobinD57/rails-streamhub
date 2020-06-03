@@ -20,15 +20,15 @@ class FollowRetreiverService
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
-    follow_details = TwitchReceiveStreamerDetailsService.new(followers)
-    TwitchTransformService.new(follow_details)
+    follow_details = TwitchReceiveStreamerDetailsService.new(followers).perform
+    TwitchTransformService.new(follow_details).perform
   end
 
   def mixer
     url = "https://mixer.com/api/v1/users/#{@identity.uid}/follows"
     followers_serialized = open(url).read # Mixer does not require authorization for this specific API call
     followers = JSON.parse(followers_serialized)
-    MixerTransformService.new(followers)
+    MixerTransformService.new(followers).perform
   end
 end
 
