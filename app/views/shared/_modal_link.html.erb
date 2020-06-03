@@ -1,8 +1,8 @@
   <%= link_to "Link a new account", follows_path,{:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :class => "nav-link stroke"} %>
   <div id="modal-window" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content clear w-100">
-        <%= render "shared/card" %>
+    <div class="modal-dialog modal-lg clear" role="document">
+      <div class="modal-content w-100">
+        <%= render "shared/connect-account" %>
         <div class="container m-3">
         </div>
       </div>

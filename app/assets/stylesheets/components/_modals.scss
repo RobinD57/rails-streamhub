@@ -2,3 +2,16 @@
 .modal-backdrop {
     z-index: 0 !important;
 }
+
+.modal-content {
+  background :transparent !important;
+  margin: 0 auto;
+  border: none !important;
+}
+
+#close-btn {
+  color: white !important;
+  position: relative;
+  bottom: 26px;
+  left: 40px;
+}
