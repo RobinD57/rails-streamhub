@@ -16,7 +16,7 @@
           <%= link_to "Settings", "#", class: "nav-link stroke" %>
         </li>
         <li class="nav-item ">
-          <%= link_to "Link a new account", "#", class: "nav-link stroke" %>
+          <%= render "shared/modal_link" %>
         </li>
         <li class="nav-item ">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link stroke" %>
