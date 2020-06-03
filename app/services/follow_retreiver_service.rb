@@ -1,27 +1,11 @@
 require 'json'
 require 'open-uri'
 
-
-class Identity
-  attr_reader :uid, :token, :provider
-
-  def initialize(params = {})
-    @uid = params[:uid]
-    @token = params[:token]
-    @provider = params[:provider]
-  end
-end
-
 class FollowRetreiverService
   attr_accessor :identity
 
   def initialize(params = {})
     @identity = params[:identity]
-    # UID from the identity
-    # token from credentials
-    # should I save credentials in identity and then we just need the identity here, nothing else
-    # the flow would be => get all identities from users => iterate over identities
-    # => use this service object for each identity to get the followers
   end
 
   def perform
@@ -37,11 +21,7 @@ class FollowRetreiverService
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
     follow_details = TwitchReceiveStreamerDetailsService.new(followers)
-    # second API call for getting details about streamers
     TwitchTransformService.new(follow_details)
-
-  # headers: my client ID for a GET request, my client secret for
-  # a POST request, the token of the respective user
   end
 
   def mixer
@@ -53,5 +33,20 @@ class FollowRetreiverService
 end
 
 
+=begin
+
+class Identity
+  attr_reader :uid, :token, :provider
+
+  def initialize(params = {})
+    @uid = params[:uid]
+    @token = params[:token]
+    @provider = params[:provider]
+  end
+end
+
 peter = Identity.new(uid: "180307681", token: "mhvpzha9o40uno204d0khw2vbnnq28", provider: "mixer")
 test = FollowRetreiverService.new(identity: peter).perform
+=end
+
+# the above is just for testing
