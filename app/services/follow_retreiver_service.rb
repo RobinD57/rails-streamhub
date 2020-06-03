@@ -20,7 +20,7 @@ class FollowRetreiverService
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
-    follow_details = TwitchReceiveStreamerDetailsService.new(followers).perform
+    follow_details = TwitchReceiveStreamerDetailsService.new(followers, @identity).perform
     TwitchTransformService.new(follow_details).perform
   end
 
