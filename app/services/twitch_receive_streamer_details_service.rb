@@ -5,9 +5,8 @@ class TwitchReceiveStreamerDetailsService
   attr_reader :twitch_follows
 
   def initialize(params = {})
-    binding.pry
-    @identity = params["identity"]
-    @twitch_follows = params["data"]
+    @identity = params[:identity]
+    @twitch_follows = params[:followers]["data"]
   end
 
 
@@ -19,7 +18,7 @@ class TwitchReceiveStreamerDetailsService
 
   def get_follow_details
     url = "https://api.twitch.tv/helix/streams?"
-    @twitch_follows.each { |follow| url << "user_id=#{follow[:to_id]}&" }
+    @twitch_follows.each { |follow| url << "user_id=#{follow["to_id"]}&" }
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
