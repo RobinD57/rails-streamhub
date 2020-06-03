@@ -14,12 +14,12 @@ class TwitchTransformService
 
   def build_result_hash(follow)
       result_hash = {
-        game_name: follow["type"]["name"],
-        stream_current_viewers: follow["type"]["viewersCurrent"],
-        stream_display_name: follow["name"],
-        stream_name: follow["token"],
-        stream_thumbnail: follow["bannerUrl"],
-        online_status: follow["online"]
+        game_name: "PLACEHOLDER", # API call required? we only get game ID
+        stream_current_viewers: follow[:viewer_count],
+        stream_display_name: follow[:user_name],
+        stream_name: follow[:title],
+        stream_thumbnail: follow[:thumbnail_url].gsub("{width}", "450").gsub("{height}", "300"),
+        online_status: true # follow[:type] == "live" ? true : false
       }
     end
   end
