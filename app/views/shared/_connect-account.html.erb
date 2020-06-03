@@ -7,31 +7,42 @@
   </div>
 
   <div class="social-icons">
+
     <div class="logo-button">
       <%= image_tag('twitchlogo-s.png') %>
-      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% if has_provider?(current_user, "twitch") %>
+        <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% else %>
+        <button type="button" class="btn btn-primary">connect</button>
+      <% end %>
     </div>
 
     <div class="logo-button">
       <%= image_tag('mixerlogo-s.png') %>
-      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% if has_provider?(current_user, "mixer") %>
+        <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% else %>
+        <button type="button" class="btn btn-primary">connect</button>
+      <% end %>
     </div>
 
     <div class="logo-button">
       <%= image_tag('youtubelogo-s.png') %>
-      <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% if has_provider?(current_user, "youtube") %>
+        <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% else %>
+        <button type="button" class="btn btn-primary">connect</button>
+      <% end %>
     </div>
 
     <div class="logo-button">
       <%= image_tag('facebooklogo-s.png') %>
-      <button type="button" class="btn btn-primary">connect</button>
+      <% if has_provider?(current_user, "facebook") %>
+        <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+      <% else %>
+        <button type="button" class="btn btn-primary">connect</button>
+      <% end %>
     </div>
-
   </div>
 </div>
 
-<!-- TO DO: write if statement for the "tick" (<i class="fas fa-check"></i>), so IF the account
-  is connected, it shows a button with the text "connected" and the tick mark. ELSE, it shows
-  the button text "connect" and no tick. -->
-
-<!-- BUTTON FOR NO CONNECTION: <button type="button" class="btn btn-primary">connect</button> -->
