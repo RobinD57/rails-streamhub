@@ -2,9 +2,10 @@ require 'json'
 require 'open-uri'
 
 class TwitchReceiveStreamerDetailsService
+  attr_reader :twitch_follows
 
   def initialize(params = {})
-    @twitch_follows = params[:followers]
+    @twitch_follows = params["data"]
   end
 
 
@@ -16,7 +17,7 @@ class TwitchReceiveStreamerDetailsService
 
   def get_follow_details
     url = "https://api.twitch.tv/helix/streams?"
-    @twitch.follows[:data].each { |follow| url << "user_id=#{follow[:to_id]}&" }
+    @twitch_follows.each { |follow| url << "user_id=#{follow[:to_id]}&" }
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
