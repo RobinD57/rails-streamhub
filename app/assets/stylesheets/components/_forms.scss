@@ -20,7 +20,7 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
-  height: 450px;
+  height: 550px;
   width: 400px;
 }
 
@@ -33,7 +33,7 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
-  height: 500px;
+  height: 600px;
   width: 400px;
 }
 
@@ -67,7 +67,12 @@
   font-weight: 200;
 }
 
-.form-logo {
+.form-logo-small {
+  width: 220px;
+  text-align: center;
+}
+
+.form-logo-big {
   width: 300px;
   text-align: center;
 }

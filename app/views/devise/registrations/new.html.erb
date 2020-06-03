@@ -1,6 +1,9 @@
 <div class="outer-box-form-signup">
   <div class="login-title">
-    <h2>Register</h2>
+    <%= link_to  root_path do  %>
+    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-big">
+    <% end %>
+    <h4>Register</h4>
   </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
