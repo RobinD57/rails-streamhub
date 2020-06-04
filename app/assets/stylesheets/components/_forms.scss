@@ -107,3 +107,11 @@ hr {
     object-fit: contains;
   }
 }
+.form-control {
+  &::placeholder {
+    // color: $input-placeholder-color;
+    color: lightgray;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+}
