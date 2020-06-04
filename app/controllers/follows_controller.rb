@@ -9,10 +9,10 @@ class FollowsController < ApplicationController
     @view_count = add_commas("1")
   end
 
-  def create
-    user = User.find(current_user.id)
-    user_data = user.get_follows
-    @follow = user_data.each { |data| Follow.create!(data) }
-  end
-
+  # def create
+    # user = User.find(current_user.id)
+    # user_data = user.get_follows
+    # @follow = user_data.each { |data| Follow.create!(data) }
+  # end
+  # not needed (for now). Just gets called from the user model method
 end

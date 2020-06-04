@@ -21,7 +21,7 @@ class FollowRetreiverService
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
     follow_details = TwitchReceiveStreamerDetailsService.new(followers: followers, identity: @identity).perform
-    TwitchTransformService.new(follow_details).perform
+    TwitchTransformService.new(follow_details: follow_details, identity: @identity).perform
   end
 
   def mixer
