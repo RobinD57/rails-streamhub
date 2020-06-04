@@ -9,8 +9,8 @@ a:hover, a:visited, a:link, a:active{
 
 .main-card {
   position: relative;
-  width: 450px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   background-size: cover;
   border-radius: 5px !important;
   transition: all 0.4s ease;
@@ -30,7 +30,7 @@ a:hover, a:visited, a:link, a:active{
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  bottom: 109px;
+  bottom: 89px;
   visibility: none;
 }
 
@@ -67,8 +67,8 @@ a:hover, a:visited, a:link, a:active{
   object-fit: contain;
   border-radius: 10px !important;
   opacity: .95;
-  bottom: 227px;
-  left: 320px;
+  bottom: 190px;
+  left: 290px;
 }
 
 .main-card:hover .overlay2 {
@@ -87,23 +87,25 @@ a:hover, a:visited, a:link, a:active{
 #viewer-background {
   position: relative;
   background: rgba(20, 34, 51, 0.7);
-  margin-left: 378px;
+  margin-left: 323px;
   width: 70px;
   border-radius: 8px;
   top: 5px;
 }
 
 #stream-title {
- padding-top: 55px;
+ padding-top: 30px;
  font-family: Montserrat;
  font-weight: bold;
+ padding-left: 5px;
+ padding-right: 5px;
 }
 
 .blur {
   position: relative;
   width: 100%;
-  height: 25%;
-  top: 190px;
+  height: 22%;
+  top: 161px;
   background: rgba(196, 196, 196, 0.4);
   border-radius: 5px;
 }
@@ -113,7 +115,7 @@ a:hover, a:visited, a:link, a:active{
   width: 44.15px;
   height: 45.47px;
   left: 10px;
-  top: 15px;
+  top: 6px;
   background-size: auto;
   background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-50x50.png);
   border-radius: 5px;
@@ -125,13 +127,13 @@ a:hover, a:visited, a:link, a:active{
   width: 54.15px;
   height: 55.47px;
   left: 64px;
-  top: 15px;
+  top: 12px;
   opacity: .9;
   font-size:medium;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   font-weight: 900;
 }
