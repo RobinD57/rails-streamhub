@@ -29,9 +29,13 @@
   font-family: Montserrat;
   i {
     font-size: 24px;
-    margin-top: 5px;
+    margin-top: 4px;
     margin-right: 5px;
   }
+}
+
+.signin-button span {
+  vertical-align: super;
 }
 
 .title-gif {
