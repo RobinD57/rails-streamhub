@@ -6,7 +6,7 @@ class FollowsController < ApplicationController
 
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
-
+    @view_count = add_commas("1")
   end
 
   # def create
