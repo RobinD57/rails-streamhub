@@ -1,7 +1,8 @@
 class TwitchTransformService
 
   def initialize(params = {})
-    @twitch_follow_details = params["data"]
+    @identity = params[:identity]
+    @twitch_follow_details = params[:follow_details]["data"]
   end
 
 
@@ -16,7 +17,7 @@ class TwitchTransformService
   def build_result_hash(follow)
     if follow["type"] == "live"
       result_hash = {
-        game_title: "PLACEHOLDER", # API call required? we only get game ID
+        game_title: TwitchGetStreamerNameService.new(game_id: follow["game_id"], identity: @identity).perform,
         viewers: follow["viewer_count"],
         stream_title: follow["title"],
         streamer_name: follow["user_name"],
