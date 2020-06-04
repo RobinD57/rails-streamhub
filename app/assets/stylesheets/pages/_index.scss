@@ -3,4 +3,7 @@
 
 body {
   background: rgba(20, 34, 51, 0.95);
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
