@@ -9,7 +9,7 @@
 }
 
 .arrow-container {
-  top: -120px;
+  top: -10px;
   bottom:0;
   left:0;
   right:0;
@@ -17,7 +17,7 @@
 }
 
 .arrow-container2 {
-  bottom: 10px;
+  bottom: 100px;
   left:0;
   right:0;
   position: absolute;
@@ -29,7 +29,7 @@
   border-width:0 2em;
   display:block;
   height:0;
-  margin:10em auto;
+  margin:1em auto;
   opacity:0.4;
   text-indent:-9999px;
   transform-origin: 50% 50%;
@@ -43,5 +43,5 @@
 
 .up {
   -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
-  border-bottom:2em solid #00b6f1;
+  border-bottom:2em solid #0e0000;
 }
