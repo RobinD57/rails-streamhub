@@ -59,7 +59,7 @@ class User < ApplicationRecord
       follow_attributes = follow_retreiver_service.perform
       follow_attributes.map do |attr|
        follow = Follow.new(attr)
-       follow.user = self
+       follow.identity = ident
        follow.save!
        follow
       end
