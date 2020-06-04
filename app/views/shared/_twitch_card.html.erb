@@ -1,5 +1,5 @@
 <%= link_to "https://www.twitch.tv/#{follow.streamer_name}", target: :_blank do  %>
-  <div class="col-lg-6 col-xl-4">
+  <div class="col-lg-6 col-xl-3">
     <div class="main-card box-shadow" style = "background: url(<%= follow.thumbnail %>); background-size: cover">
       <div id="viewer-background" class="box-shadow text-center">
         <p class="viewer-count text-center pl-2 mr-1 mt-1 shadowed">
@@ -18,11 +18,11 @@
         <div class="text-card1">
           <div class="text-center">
             <p id="stream-title" class='shadowed'>
-              <%= follow.stream_title.length > 50 ? follow.stream_title.first(40) + "..." : follow.stream_title %>
+              <%= follow.stream_title.length > 50 ? follow.stream_title.first(35) + "..." : follow.stream_title %>
             </p>
             <i id="" class="text-center shadowed fab fa-twitch provider-icon "></i>
           </div>
-          <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-5"> <%= follow.streamer_name  %> </h5>
+          <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-3"> <%= follow.streamer_name  %> </h5>
           <p id="streamer-game-pop-up" class="text-left ml-2 shadowed game"> <%= follow.game_title  %></p>
         </div>
       </div>
