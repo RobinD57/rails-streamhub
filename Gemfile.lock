@@ -64,6 +64,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    animate.css-rails (3.2.0)
     autoprefixer-rails (9.7.6)
       execjs
     bcrypt (3.1.13)
@@ -283,6 +284,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-session_store
+  animate.css-rails (~> 3.2.0)
   autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
