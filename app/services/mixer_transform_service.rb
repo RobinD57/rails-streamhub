@@ -1,12 +1,14 @@
 class MixerTransformService
 
   def initialize(params = {})
-    @mixer_follows = params[:followers]
+    @mixer_follows = params
   end
 
 
   def perform
-    results_hash = @mixer_follows.each { |follow| build_result_hash(follow) }
+    @mixer_follows.map do |follow|
+      build_result_hash(follow)
+    end.reject { |h| h.nil? }
   end
 
   private
@@ -14,12 +16,12 @@ class MixerTransformService
   def build_result_hash(follow)
     if follow["online"]
       result_hash = {
-        game_name: follow["type"]["name"],
-        stream_current_viewers: follow["type"]["viewersCurrent"],
-        stream_display_name: follow["name"],
-        stream_name: follow["token"],
-        stream_thumbnail: follow["bannerUrl"], # 440x250 needed
-        online_status: follow["online"]
+        game_title: follow["type"]["name"],
+        viewers: follow["type"]["viewersCurrent"],
+        stream_title: follow["name"],
+        streamer_name: follow["token"],
+        thumbnail: follow["bannerUrl"],
+        online_status: true
       }
     end
   end
