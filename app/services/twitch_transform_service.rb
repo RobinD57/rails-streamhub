@@ -17,8 +17,8 @@ class TwitchTransformService
       result_hash = {
         game_title: "PLACEHOLDER", # API call required? we only get game ID
         viewers: follow["viewer_count"],
-        stream_title: follow["user_name"],
-        streamer_name: follow["title"],
+        stream_title: follow["title"],
+        streamer_name: follow["user_name"],
         thumbnail: follow["thumbnail_url"].gsub("{width}", "450").gsub("{height}", "300"),
         online_status: true
       }
