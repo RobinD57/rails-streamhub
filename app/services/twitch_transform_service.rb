@@ -1,7 +1,7 @@
 class TwitchTransformService
 
   def initialize(params = {})
-    @twitch_follow_details = params.twitch_follows
+    @twitch_follow_details = params["data"]
   end
 
 
@@ -15,17 +15,17 @@ class TwitchTransformService
 
   def build_result_hash(follow)
       result_hash = {
-        game_name: "PLACEHOLDER", # API call required? we only get game ID
-        stream_current_viewers: follow[:viewer_count],
-        stream_display_name: follow[:user_name],
-        stream_name: follow[:title],
-        stream_thumbnail: follow[:thumbnail_url].gsub("{width}", "450").gsub("{height}", "300"),
-        online_status: true # follow[:type] == "live" ? true : false
+        game_title: "PLACEHOLDER", # API call required? we only get game ID
+        viewers: follow["viewer_count"],
+        stream_title: follow["user_name"],
+        streamer_name: follow["title"],
+        thumbnail: follow["thumbnail_url"].gsub("{width}", "450").gsub("{height}", "300"),
+        online_status: true
       }
   end
 
   def is_online?
-    @twitch_follow_details["data"].each do |follow|
+    @twitch_follow_details.each do |follow|
       if follow["type"] == "live"
         build_result_hash(follow)
       end
