@@ -1,5 +1,3 @@
-
-
 const morphLogo = () => {
 $( ".navbar-toggler").on( "click", function() {
   $( "#arrow" ).toggle();
