@@ -63,7 +63,7 @@ a:hover, a:visited, a:link, a:active{
   object-fit: contain;
   border-radius: 10px !important;
   opacity: .95;
-  bottom: 240px;
+  bottom: 227px;
   left: 320px;
 }
 
@@ -75,15 +75,25 @@ a:hover, a:visited, a:link, a:active{
 
 .viewer-count {
   position: relative;
-  color: #D7D7D7;
-  font-size: 10px;
-  opacity: .8;
+  color: white;
+  font-size: 12px;
+  opacity: 1;
+  z-index:1050;
 }
 
-#views {
-  color: #D7D7D7;
-  font-size: 10px;
-  opacity: .8;
+#viewer-background {
+  position: relative;
+  background: rgba(20, 34, 51, 0.7);
+  margin-left: 378px;
+  width: 70px;
+  border-radius: 8px;
+  top: 5px;
+}
+
+#stream-title {
+ padding-top: 55px;
+ font-family: Montserrat;
+ font-weight: bold;
 }
 
 .blur {
@@ -113,7 +123,7 @@ a:hover, a:visited, a:link, a:active{
   height: 55.47px;
   left: 64px;
   top: 15px;
-  opacity: .7;
+  opacity: .9;
   font-size:medium;
   font-family: Montserrat;
   font-style: normal;
@@ -133,7 +143,7 @@ a:hover, a:visited, a:link, a:active{
   font-weight: bold;
   font-size: 20px;
   line-height: 21px;
-  margin-top: 60px;
+  margin-top: 0px;
   padding-left: 15px;
 }
 
@@ -153,13 +163,10 @@ a:hover, a:visited, a:link, a:active{
 .provider-icon {
   position: relative;
   color: #D7D7D7;
-  opacity: .8;
-  font-weight: bold;
+  opacity: .1;
   font-size: 76px;
   line-height: 21px;
   padding-top: 50px;
-  top: 50px;
-
 }
 
 .shadowed {
