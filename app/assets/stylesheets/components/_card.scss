@@ -14,8 +14,11 @@ a:hover, a:visited, a:link, a:active{
   background-size: cover;
   border-radius: 5px !important;
   transition: all 0.4s ease;
-  margin-top: 40px;
 };
+
+.card-click {
+  margin: 18px 12px;
+}
 
 
 .main-card:hover {
