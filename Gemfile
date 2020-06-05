@@ -38,6 +38,7 @@ gem 'omniauth-twitch'
 gem 'omniauth-mixer'
 gem "activerecord-session_store"
 
+gem 'animate.css-rails', '~> 3.2.0'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

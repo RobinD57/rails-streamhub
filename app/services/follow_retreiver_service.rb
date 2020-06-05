@@ -15,7 +15,7 @@ class FollowRetreiverService
   private
 
   def twitch
-    url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}"
+    url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}&first=100"
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
@@ -31,22 +31,3 @@ class FollowRetreiverService
     MixerTransformService.new(followers).perform
   end
 end
-
-
-=begin
-
-class Identity
-  attr_reader :uid, :token, :provider
-
-  def initialize(params = {})
-    @uid = params[:uid]
-    @token = params[:token]
-    @provider = params[:provider]
-  end
-end
-
-peter = Identity.new(uid: "180307681", token: "mhvpzha9o40uno204d0khw2vbnnq28", provider: "mixer")
-test = FollowRetreiverService.new(identity: peter).perform
-=end
-
-# the above is just for testing

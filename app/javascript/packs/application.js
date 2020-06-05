@@ -35,5 +35,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   morphLogo();
   scrollFinal();
-  quickLoad();
 });
+
