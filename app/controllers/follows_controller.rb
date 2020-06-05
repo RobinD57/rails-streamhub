@@ -2,10 +2,7 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @follows = Follow.all
-    # ids = current_user.identities.map { |x| x.identity_id }
-    # @follows = Follow.where( (identity_id: ids[0] && identity_id: ids[1]) || identity_id: ids[0] )
-    # raise
+    @follows = current_user.follows
 
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
