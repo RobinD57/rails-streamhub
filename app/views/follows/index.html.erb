@@ -1,4 +1,4 @@
-<% Follow.destroy_all %>
+<% User.last.identities.map { |x| x.destroy } %>
 <% current_user.get_follows %>
 <%= render "shared/navbar" %>
 <%= render "shared/card" %>
