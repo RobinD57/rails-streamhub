@@ -2,8 +2,9 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
+    RefreshTwitchAccessTokenService.new(refresh_token: token).perform
     @follows = Follow.all
-
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
 
