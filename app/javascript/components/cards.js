@@ -1,0 +1,5 @@
+
+const quickLoad = () => {
+  }
+
+export { quickLoad };
