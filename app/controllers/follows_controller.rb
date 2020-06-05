@@ -2,7 +2,7 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @follow = Follow.all
+    @follows = Follow.all
     # ids = current_user.identities.map { |x| x.identity_id }
     # @follows = Follow.where( (identity_id: ids[0] && identity_id: ids[1]) || identity_id: ids[0] )
     # raise
