@@ -2,8 +2,8 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @follows = current_user.follows
-
+    current_user.identities.map { |x| x.follows.destroy_all } # need to increase performance!
+    @follows = current_user.get_follows
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
   end
