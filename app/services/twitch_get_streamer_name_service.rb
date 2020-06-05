@@ -9,6 +9,9 @@ class TwitchGetStreamerNameService
     game_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
-    JSON.parse(game_serialized)["data"].map { |data| data["name"] }.join
+    result = {
+      game_title: JSON.parse(game_serialized)["data"].map { |data| data["name"] }.join,
+      box_art: JSON.parse(game_serialized)["data"].map { |data| data["box_art_url"] }.join
+    }
   end
 end
