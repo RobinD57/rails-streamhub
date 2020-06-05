@@ -66,3 +66,9 @@ html {
   letter-spacing: 10px;
   border-radius: 5px;
 }
+
+@media only screen and (max-device-width: 992px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
