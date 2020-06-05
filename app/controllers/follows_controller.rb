@@ -3,8 +3,8 @@ class FollowsController < ApplicationController
 
   def index
 
-    token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
-    RefreshTwitchAccessTokenService.new(refresh_token: token).perform
+    # token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
+    # RefreshTwitchAccessTokenService.new(refresh_token: token).perform
     current_user.identities.map { |identity| identity.follows.destroy_all } # need to increase performance!
     @follows = current_user.get_follows
 
