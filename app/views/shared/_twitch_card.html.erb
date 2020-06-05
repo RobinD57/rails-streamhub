@@ -1,4 +1,4 @@
-<%= link_to "https://www.twitch.tv/#{follow.streamer_name}", target: :_blank,  rel: :prerender do  %>
+<%= link_to "https://www.twitch.tv/#{follow.streamer_name}", target: :_blank,  rel: :prerender, class: "card-click" do  %>
   <div class="col-lg-6 col-xl-3">
     <div class="main-card box-shadow" style = "background: url(<%= follow.thumbnail %>); background-size: cover">
       <div id="viewer-background" class="box-shadow text-center">
