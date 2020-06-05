@@ -20,7 +20,7 @@ class MixerTransformService
         viewers: follow["type"]["viewersCurrent"],
         stream_title: follow["name"],
         streamer_name: follow["token"],
-        thumbnail: follow["bannerUrl"],
+        thumbnail: "https://thumbs.mixer.com/channel/#{follow["id"]}.small.jpg",
         avatar: follow["user"]["avatarUrl"],
         box_art: follow["type"]["coverUrl"],
         online_status: true
