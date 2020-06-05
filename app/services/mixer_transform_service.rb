@@ -21,6 +21,8 @@ class MixerTransformService
         stream_title: follow["name"],
         streamer_name: follow["token"],
         thumbnail: follow["bannerUrl"],
+        avatar: follow["user"]["avatarUrl"],
+        box_art: follow["type"]["coverUrl"],
         online_status: true
       }
     end
