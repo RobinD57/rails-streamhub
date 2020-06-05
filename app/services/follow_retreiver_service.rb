@@ -15,7 +15,7 @@ class FollowRetreiverService
   private
 
   def twitch
-    url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}"
+    url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}&first=100"
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
