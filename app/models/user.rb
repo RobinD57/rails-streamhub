@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer)
   has_many :identities, dependent: :destroy
+  has_many :follows, through: :identities
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
   # validates :username, presence: true
 

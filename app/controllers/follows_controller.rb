@@ -2,12 +2,18 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+
     token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
     RefreshTwitchAccessTokenService.new(refresh_token: token).perform
-    @follows = Follow.all
+    current_user.identities.map { |identity| identity.follows.destroy_all } # need to increase performance!
+    @follows = current_user.get_follows
+
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
+  end
 
+  def scoped_collection
+    Follow.where(identity_id: current_user.id)
   end
 
   # def create

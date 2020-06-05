@@ -63,12 +63,12 @@ a:hover, a:visited, a:link, a:active{
 .overlay2 img {
   position: relative;
   height: 35%;
-  width: 55%;
-  object-fit: contain;
-  border-radius: 10px !important;
+  width: 35%;
+  object-fit: cover;
+  border-radius: 3px !important;
   opacity: .95;
-  bottom: 190px;
-  left: 290px;
+  bottom: 185px;
+  left: 312px;
 }
 
 .main-card:hover .overlay2 {
@@ -146,10 +146,11 @@ a:hover, a:visited, a:link, a:active{
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 21px;
-  margin-top: 0px;
-  padding-left: 15px;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  padding-left: 13px;
 }
 
 #streamer-game-pop-up {
@@ -159,7 +160,7 @@ a:hover, a:visited, a:link, a:active{
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
   padding-left: 15px;
   padding-top: 0px;
@@ -168,7 +169,7 @@ a:hover, a:visited, a:link, a:active{
 .provider-icon {
   position: relative;
   color: #D7D7D7;
-  opacity: .1;
+  opacity: .15;
   font-size: 76px;
   line-height: 21px;
   padding-top: 50px;
@@ -192,5 +193,10 @@ a:hover, a:visited, a:link, a:active{
     0.025em 0.025em 0 mix(#fff, grey, 68%),
     0.03em 0.03em 0 mix(#fff, grey, 70%),
     0.035em 0.035em 0 mix(#fff, grey, 72%);
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: green;
 }
 

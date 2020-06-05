@@ -1,4 +1,4 @@
-<%= link_to "https://www.mixer.com/#{follow.streamer_name}", target: :_blank do  %>
+<%= link_to "https://www.mixer.com/#{follow.streamer_name}", target: :_blank, rel: :prerender do  %>
   <div class="col-lg-6 col-xl-3">
     <div class="main-card box-shadow" style = "background: url(<%= follow.thumbnail %>); background-size: cover">
       <div id="viewer-background" class="box-shadow">
@@ -8,7 +8,7 @@
         </p>
       </div>
       <div class="d-flex blur box-shadow">
-        <div class="elipse box-shadow">
+        <div class="elipse box-shadow" style = "background: url(<%= follow.avatar %>); background-size: cover">
           <div>
             <h5 class="streamer-name shadowed"> <%= follow.streamer_name %></h5>
           </div>
@@ -18,16 +18,16 @@
         <div class="text-card1">
           <div class="text-center">
             <p id="stream-title" class='shadowed'>
-              <%= follow.stream_title.length > 50 ? follow.stream_title.first(35) + "..." : follow.stream_title %>
+              <%= follow.stream_title.length > 35 ? follow.stream_title.first(35) + "..." : follow.stream_title %>
             </p>
             <i id="" class="text-center shadowed fab fa-mixer provider-icon "></i>
           </div>
-          <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-5"> <%= follow.streamer_name  %> </h5>
+          <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-3"> <%= follow.streamer_name  %> </h5>
           <p id="streamer-game-pop-up" class="text-left ml-2 shadowed game"> <%= follow.game_title  %></p>
         </div>
       </div>
       <div class="overlay2 overlayFade2 shadowed">
-        <img class="" src="https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-285x380.jpg" alt="">
+        <%= image_tag follow.box_art, alt: "alttext" %>
       </div>
     </div>
   </div>
