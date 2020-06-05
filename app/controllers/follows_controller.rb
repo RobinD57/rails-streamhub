@@ -9,7 +9,6 @@ class FollowsController < ApplicationController
 
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
-
   end
 
   def scoped_collection
