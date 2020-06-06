@@ -261,6 +261,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :twitch, ENV["TWITCH_APP_ID"], ENV["TWITCH_APP_SECRET"]
   config.omniauth :mixer, ENV["MIXER_APP_ID"], ENV["MIXER_APP_SECRET"]
+  config.omniauth :google_oauth2, ENV["YOUTUBE_APP_ID"], ENV["YOUTUBE_APP_SECRET"]#, { access_type: "offline", approval_prompt: "force", name: "youtube" }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

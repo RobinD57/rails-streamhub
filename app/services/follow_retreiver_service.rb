@@ -30,4 +30,13 @@ class FollowRetreiverService
     followers = JSON.parse(followers_serialized)
     MixerTransformService.new(followers).perform
   end
+
+  def google_oauth2
+    # key = ENV["YOUTUBE_API_KEY"]
+    url = "https://www.googleapis.com/youtube/v3/subscriptions?part=subscriberSnippet&mySubscribers=true&key=AIzaSyDFknDqLBCA6nK7RArJlnoA0oEicoilEhY" ##{ENV[YOUTUBE_APP_ID]
+    followers_serialized = open(url,
+      "Authorization" => "Bearer #{@identity.token}").read
+    followers = JSON.parse(followers_serialized)
+    binding.pry
+  end
 end

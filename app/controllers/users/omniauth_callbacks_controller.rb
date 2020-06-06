@@ -17,7 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     }
   end
 
-  [:twitch, :mixer].each do |provider|
+  [:twitch, :mixer, :google_oauth2].each do |provider|
     provides_callback_for provider
   end
 
