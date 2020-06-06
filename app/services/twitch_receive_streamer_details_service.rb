@@ -2,7 +2,6 @@ require 'json'
 require 'open-uri'
 
 class TwitchReceiveStreamerDetailsService
-  attr_reader :twitch_follows
 
   def initialize(params = {})
     @identity = params[:identity]
