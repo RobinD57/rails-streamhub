@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :trackable, :confirmable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer)
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer google_oauth2)
   has_many :identities, dependent: :destroy
   has_many :follows, through: :identities
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
@@ -67,6 +67,4 @@ class User < ApplicationRecord
     end
     return follows_array.flatten
   end
-  # get follows => iterate => load follow for each identity => save them in follows db table
-  # load follows
 end
