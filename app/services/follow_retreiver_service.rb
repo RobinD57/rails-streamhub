@@ -33,7 +33,7 @@ class FollowRetreiverService
 
   def google_oauth2
     key = ENV["YOUTUBE_API_KEY"]
-    url = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=live&maxResults=50&videoCategoryId=20&type=video" #&key=#{key}
+    url = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=live&maxResults=50&videoCategoryId=20&type=video&mine=true"
     followers_serialized = open(url,
       "Client-ID" => ENV["YOUTUBE_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read

@@ -261,7 +261,13 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :twitch, ENV["TWITCH_APP_ID"], ENV["TWITCH_APP_SECRET"]
   config.omniauth :mixer, ENV["MIXER_APP_ID"], ENV["MIXER_APP_SECRET"]
-  config.omniauth :google_oauth2, ENV["YOUTUBE_APP_ID"], ENV["YOUTUBE_APP_SECRET"], skip_jwt: true
+  config.omniauth :google_oauth2, ENV["YOUTUBE_APP_ID"], ENV["YOUTUBE_APP_SECRET"],
+      {
+      scope: 'userinfo.email, userinfo.profile, https://www.googleapis.com/auth/youtube.readonly, https://www.googleapis.com/auth/youtube',
+      prompt: 'select_account',
+      skip_jwt: true,
+      # access_type: "online"
+    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
