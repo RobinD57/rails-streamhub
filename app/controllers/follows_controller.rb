@@ -5,7 +5,7 @@ class FollowsController < ApplicationController
 
     # token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
     # RefreshTwitchAccessTokenService.new(refresh_token: token).perform
-    current_user.identities.map { |identity| identity.follows.destroy_all } # need to increase performance!
+    current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
 
     # load follows from user model
