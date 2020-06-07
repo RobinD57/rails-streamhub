@@ -42,3 +42,15 @@ class FollowRetreiverService
     YoutubeTransformService.new(followers).perform
   end
 end
+
+# https://www.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&mine=true&maxResults=50
+# => gives me all my subs
+
+# https://www.googleapis.com/youtube/v3/liveBroadcasts?part=snippet%2CcontentDetails%2Cstatus&broadcastStatus=active&broadcastType=all
+# no proper return?
+
+# https://www.googleapis.com/youtube/v3/liveStreams?part=snippet%2Ccdn%2CcontentDetails%2Cstatus&id=YOUR_STREAM_ID
+
+
+# https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCHpC-6gbyYWhyV5oAYcOfMA&eventType=live&type=video
+# => Can only enter 1 id. evenType=live doesn't seem to do anything at all
