@@ -1,3 +1,13 @@
 <%= render "shared/navbar" %>
+<%= render "shared/filter" %>
 <%= render "shared/card" %>
 <%= render "shared/loader" %>
+
+<div id="modal-window" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg clear" role="document">
+    <div class="modal-content w-100">
+      <%= render "shared/connect-account" %>
+      <div class="container m-3">
+    </div>
+  </div>
+</div>

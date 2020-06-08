@@ -22,11 +22,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .fa-check {
-  color: #C4C4C4;
+  color: #39C16C;
 }
 
 .btn-primary {
@@ -37,6 +37,7 @@
   width: 170px;
   font-family: Montserrat;
   font-weight: 400;
+  border-radius: 5px;
 }
 
 .btn-primary:active{
