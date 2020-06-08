@@ -15,8 +15,12 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-    follows_path
-  end
+    if resource.sign_in_count == 1
+      follows_path({ first_sign_in: true })
+    else
+      follows_path
+   end
+ end
 
   def after_sign_out_path_for(resource)
     root_path

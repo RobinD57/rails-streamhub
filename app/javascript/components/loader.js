@@ -6,7 +6,7 @@
 
 const checkLoad = () => {
 window.addEventListener('load', (event) => {
-  document.querySelector(".loader-wrapper").innerHTML = " "
+  document.querySelector(".loader-wrapper").style.display = "none"
   });
 }
 

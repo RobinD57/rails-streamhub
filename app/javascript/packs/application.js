@@ -31,13 +31,15 @@ import { morphLogo } from '../components/navbar';
 import { scrollFinal } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
+import { firstSignUp } from '../components/first_sign_up'
 
 
- checkLoad();
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  checkLoad();
+  firstSignUp()
   morphLogo();
   scrollFinal();
   Turbolinks.setProgressBarDelay(500);
