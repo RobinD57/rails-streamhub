@@ -6,6 +6,10 @@ class FollowsController < ApplicationController
     current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
 
+    if params[:query].present?
+      @follows = Follow.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @follows
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
   end
