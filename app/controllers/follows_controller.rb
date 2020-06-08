@@ -7,6 +7,11 @@ class FollowsController < ApplicationController
     end
     current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
+    if params[:sort] == "views"
+      @follows = @follows.order(viewers: :desc)
+    elsif params[:sort] == "alpha"
+      @follows = @follows.order(:streamer_name)
+    end
 
     # load follows from user model
     # check when they've been loaded, if not long ago just use cache
@@ -25,7 +30,14 @@ class FollowsController < ApplicationController
   #
   private
 
-    def refresh_twitch_token
+  def refresh_twitch_token
+    refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
+    old_access_token = Identity.find_by(user: current_user, provider: 'twitch').token
+    new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+    current_user.identities.update(token:  new_access_token)
+  end
+  
+   def refresh_twitch_token
       refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
       new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
       current_user.identities.update(token:  new_access_token)

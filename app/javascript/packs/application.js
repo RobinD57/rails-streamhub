@@ -31,7 +31,14 @@ import { morphLogo } from '../components/navbar';
 import { scrollFinal } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
+
+import { sort } from '../components/sort';
+
+
+ checkLoad();
+
 import { firstSignUp } from '../components/first_sign_up'
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -41,5 +48,6 @@ document.addEventListener('turbolinks:load', () => {
   morphLogo();
   scrollFinal();
   Turbolinks.setProgressBarDelay(500);
+  sort();
 });
 
