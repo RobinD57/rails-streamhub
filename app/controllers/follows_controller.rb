@@ -2,7 +2,9 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    refresh_twitch_token
+    if @identity
+      refresh_twitch_token
+    end
     current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
 
