@@ -1,5 +1,5 @@
 body, html {
-  height: 100%;
+  height: 100vh;
 }
 
 html {
@@ -64,7 +64,8 @@ html {
   color: #D7D7D7;
   padding: 18px;
   font-size: 25px;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
+  line-height: 70px;
   border-radius: 5px;
 }
 
