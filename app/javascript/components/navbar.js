@@ -4,7 +4,6 @@ $( ".navbar-toggler").on( "click", function() {
   })
 };
 
-
 const scrollFunction = () => {
  $(document).on("scroll",function(){
   if ($(document).scrollTop() > 80){
