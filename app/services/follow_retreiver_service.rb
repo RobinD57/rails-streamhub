@@ -46,7 +46,6 @@ class FollowRetreiverService
       "Client-ID" => ENV["YOUTUBE_APP_ID"],
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
-    binding.pry
     YoutubeTransformService.new(followers).perform
   end
 end
