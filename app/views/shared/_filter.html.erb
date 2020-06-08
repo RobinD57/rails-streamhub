@@ -1,0 +1,8 @@
+ <%= form_tag follows_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control ", id: "search",
+    placeholder: "Find a streamer"
+  %>
+  <%= submit_tag "Search", class: "btn btn-sm btn-primary" %>
+<% end %>
