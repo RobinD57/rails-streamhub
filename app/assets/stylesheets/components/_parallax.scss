@@ -1,5 +1,5 @@
 body, html {
-  height: 100%;
+  height: 100vh;
 }
 
 html {
@@ -56,6 +56,7 @@ html {
   width: 100%;
   text-align: center;
   color: #000;
+  flex-wrap: wrap;
 }
 
 .caption span.border {
@@ -63,6 +64,23 @@ html {
   color: #D7D7D7;
   padding: 18px;
   font-size: 25px;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
+  line-height: 70px;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 920px) {
+  .bgimg1, .bgimg2, .bgimg3 {
+    background-attachment: scroll;
+  }
+  .bgimg1 {
+    height: unset;
+    min-height: fit-content;
+  }
+  .caption {
+    height: unset;
+    min-height: fit-content;
+  }
+}
+
+

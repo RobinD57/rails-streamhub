@@ -1,50 +1,66 @@
 <div class="bgimg1" id="top">
   <%= render "shared/navbar_landing" %>
-    <div class="animated fadeIn">
-      <div class="signin-box">
-      <%= render "shared/login-form" %>
-        <div class="title-gif">
-          <h1>Join Streamhub today</h1>
-          <p>All your favorite streamers in one place. </p>
-          <img id="giftwitch" src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591023868/twich_gif_xxmqbt.gif" >
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="animated fadeIn">
+            <div class="signin-box">
+            <%= render "shared/login-form" %>
+              <div class="title-gif">
+                <h1>Join Streamhub today</h1>
+                <p>All your favorite streamers in one place. </p>
+                <img id="giftwitch" src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591023868/twich_gif_xxmqbt.gif" >
+              </div>
+            </div>
+          </div>
+
+          <div class="arrow-container">
+            <a href="#more" class="arrow down">Down</a>
+          </div>
+
         </div>
+      </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="color-box1" id="more">
+        <h3>Your favorite streamers in one click</h3>
+        <p>Streamhub is the quickest way to find out who is streaming, which game, and in which platform. With our consolidated Dashboard, you can effortlessly see all the relevant information and navigate to your favorite streaming with just one click, regardless of which platform.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="bgimg2">
+      <div class="caption">
+        <span class="border">Discover the best live streams anywhere.</span>
       </div>
     </div>
 
 
-  <div class="arrow-container">
-    <a href="#more" class="arrow down">Down</a>
-  </div>
 
-</div>
-  <div class="color-box1" id="more">
-    <h3>Your favorite streamers in one click</h3>
-    <p>Streamhub is the quickest way to find out who is streaming, which game, and in which platform. With our consolidated Dashboard, you can effortlessly see all the relevant information and navigate to your favorite streaming with just one click, regardless of which platform.</p>
-  </div>
-
-  <div class="bgimg2">
-    <div class="caption">
-      <span class="border">Discover the best live streams anywhere.</span>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="color-box2">
+        <h3>Interactive livestreaming</h3>
+        <p>Connect your account from Twitch, Mixer, Youtube Gaming and Facebook Gaming. Track everything from just one place.</p>
+      </div>
     </div>
   </div>
 
-  <div class="color-box2">
-    <h3>Interactive livestreaming</h3>
-    <p>Connect your account from Twitch, Mixer, Youtube Gaming and Facebook Gaming. Track everything from just one place.</p>
-  </div>
+    <div class="bgimg3">
+      <div class="caption">
+        <%= link_to  new_registration_path(resource_name) do  %>
+        <span class="border">Register now!</span>
+        <% end %>
+      </div>
 
-  <div class="bgimg3">
-    <div class="caption">
-      <%= link_to  new_registration_path(resource_name) do  %>
-      <span class="border">Register now!</span>
-      <% end %>
+      <div class="arrow-container2">
+        <a href="#top" class="arrow up">Up</a>
+      </div>
+
     </div>
-
-    <div class="arrow-container2">
-      <a href="#top" class="arrow up">Up</a>
-    </div>
-
   </div>
-
-</div>
-

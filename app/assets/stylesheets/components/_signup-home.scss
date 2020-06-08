@@ -2,20 +2,23 @@
   background: #263445f5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  margin: 50px;
+  margin: 25px;
   padding-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
-  height: 520px;
-  width: 400px;
+  height: 500px;
+  width: 380px;
 }
 
 .signin-box {
   padding-top: 0px;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   justify-content: center;
+  align-items: baseline;
+  align-content: center;
   // background-color: #14223385;
   // box-shadow: 0px 0px 40px 40px #00000085
 }
@@ -43,13 +46,14 @@
 }
 
 .title-gif {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  margin-right: 50px;
+  margin: 25px;
   display: block;
   color: #D7D7D7;
   font-family: Montserrat;
   font-weight: 200;
+  flex-direction: column;
+  flex-shrink: 1;
+  text-align: center;
 }
 
 .title-gif h1{
@@ -58,8 +62,8 @@
 }
 
 #giftwitch {
-  width: 500px;
-  height: 400px;
-  margin-top: 20px;
+  width: 50vh;
+  height: 40vh;
+  margin-top: 5%;
   border-radius: 5px;
 }
