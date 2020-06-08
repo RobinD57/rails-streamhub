@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="175.03375mm"
+   height="174.76245mm"
+   viewBox="0 0 175.03375 174.76245"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="facebook-gaming-logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="98.548125"
+     inkscape:cy="506.06803"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(82.636298,-32.846057)">
+    <path
+       style="fill:#005fec;fill-opacity:1;fill-rule:evenodd;stroke-width:38.36100006"
+       d="m -312.32617,124.14258 v 200.84375 459.67578 h 202.72851 228.08789 V 583.81836 H -109.59766 V 324.98633 H 348.97461 V 124.14258 Z M -81.597656,353.69336 V 554.53711 H 146.49023 v 230.125 H 349.21875 V 353.69336 H 146.49023 Z"
+       transform="scale(0.26458333)"
+       id="rect828"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="7.255744"
+       inkscape:export-ydpi="7.255744"
+       inkscape:export-filename="C:\Users\suitedoalex\facebook-gaming-7.png" />
+  </g>
+</svg>
