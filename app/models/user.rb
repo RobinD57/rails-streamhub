@@ -2,12 +2,13 @@ class User < ApplicationRecord
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
   # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, :trackable, :confirmable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer)
+  # :lockable, :timeoutable, :confirmable
+  devise :database_authenticatable, :registerable, :trackable,
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(twitch mixer google_oauth2)
   has_many :identities, dependent: :destroy
   has_many :follows, through: :identities
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+  after_create :welcome_by_email
   # validates :username, presence: true
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
@@ -56,8 +57,7 @@ class User < ApplicationRecord
   def get_follows
     idents = self.identities
     follows_array = idents.map do |ident|
-      follow_retreiver_service = FollowRetreiverService.new(identity: ident)
-      follow_attributes = follow_retreiver_service.perform
+      follow_attributes = FollowRetreiverService.new(identity: ident).perform
       follow_attributes.map do |attr|
        follow = Follow.new(attr)
        follow.identity = ident
@@ -67,6 +67,10 @@ class User < ApplicationRecord
     end
     return follows_array.flatten
   end
-  # get follows => iterate => load follow for each identity => save them in follows db table
-  # load follows
+
+  private
+
+  def welcome_by_email
+    UserMailer.with(user: self).welcome.deliver_later
+  end
 end

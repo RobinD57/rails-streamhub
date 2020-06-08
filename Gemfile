@@ -29,6 +29,8 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'letter_opener', group: :development
+gem 'postmark-rails'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -36,8 +38,9 @@ gem 'simple_form'
 gem "omniauth"
 gem 'omniauth-twitch'
 gem 'omniauth-mixer'
+gem 'omniauth-google-oauth2'
 gem "activerecord-session_store"
-
+gem 'rest-client'
 gem 'animate.css-rails', '~> 3.2.0'
 
 group :development, :test do  gem 'pry-byebug'
