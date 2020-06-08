@@ -5,6 +5,9 @@ class Identity < ApplicationRecord
   validates_uniqueness_of :uid, :scope => :provider
 
   def self.find_for_oauth(auth)
-    find_or_create_by(uid: auth.uid, provider: auth.provider, token: auth.credentials["token"], refresh_token: auth.credentials["refresh_token"])
+    find_or_create_by(uid: auth.uid, provider: auth.provider) do |identity|
+      identity.refresh_token = auth.credentials["refresh_token"]
+      identity.token = auth.credentials.token
+    end
   end
 end
