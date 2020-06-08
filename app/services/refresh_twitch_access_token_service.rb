@@ -14,13 +14,9 @@ class RefreshTwitchAccessTokenService
     request = Net::HTTP::Post.new(uri)
     request.set_form_data(
         "client_id" => ENV['TWITCH_APP_ID'],
-        # "client_id" => '77vqrdbqf7hjl2ddf9dvff501e2izj',
         "client_secret" => ENV['TWITCH_APP_SECRET'],
-        # "client_secret" => 'ucdhv4lz3gx0rntfn8v476djbs34le',
         "grant_type" => "refresh_token",
-        # "grant_type" => "refresh_token",
         "refresh_token" => "#{@twitch_refresh_token}",
-        # "refresh_token" => 'quopnd68ftirfc946jbxf26lljadrggvutjnfhlbldqhtt4qi7'
         )
 
     req_options = {
@@ -32,7 +28,6 @@ class RefreshTwitchAccessTokenService
     end
     jsonrespone = JSON.parse(response.body)
     jsonrespone['access_token']
-      # puts @twitch_refresh_token
   end
 end
 # curl -d "grant_type=refresh_token&refresh_token=p66qi0p1wd1ay14gf9884tp0eploqcvcvg6dn10bhx637j17qz&client_id=77vqrdbqf7hjl2ddf9dvff501e2izj&client_secret=ucdhv4lz3gx0rntfn8v476djbs34le" https://id.twitch.tv/oauth2/token
