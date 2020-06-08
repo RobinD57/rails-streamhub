@@ -1,6 +1,12 @@
+// const checkLoad = () => {
+//   document.addEventListener('DOMContentLoaded', (event) => {
+//       document.querySelector(".loader-wrapper").innerHTML = " "
+//   });
+// }
+
 const checkLoad = () => {
-  document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelector(".loader-wrapper").innerHTML = " "
+window.addEventListener('load', (event) => {
+  document.querySelector(".loader-wrapper").innerHTML = " "
   });
 }
 
