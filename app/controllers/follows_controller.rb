@@ -2,9 +2,7 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
-    # token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
-    # RefreshTwitchAccessTokenService.new(refresh_token: token).perform
+    refresh_twitch_token
     current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
 
@@ -22,4 +20,13 @@ class FollowsController < ApplicationController
     # @follow = user_data.each { |data| Follow.create!(data) }
   # end
   # not needed (for now). Just gets called from the user model method
+  #
+  private
+
+    def refresh_twitch_token
+      refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
+      old_access_token = Identity.find_by(user: current_user, provider: 'twitch').token
+      new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+      current_user.identities.update(token:  new_access_token)
+    end
 end
