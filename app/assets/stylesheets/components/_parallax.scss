@@ -73,4 +73,10 @@ html {
   .bgimg1, .bgimg2, .bgimg3 {
     background-attachment: scroll;
   }
+  .bgimg1 {
+    height: unset;
+    min-height: fit-content;
+  }
 }
+
+
