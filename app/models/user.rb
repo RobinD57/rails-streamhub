@@ -65,7 +65,8 @@ class User < ApplicationRecord
        follow
       end
     end
-    return follows_array.flatten
+    follows = follows_array.flatten
+    return Follow.where(id: follows.map(&:id))
   end
 
   private

@@ -1,0 +1,35 @@
+.sort {
+  width: 10%;
+  left: 1400px;
+  position: absolute;
+}
+
+.sort a:hover, .sort a:visited, .sort a:link, .sort a:active{
+  text-decoration: none;
+}
+
+.sort-btn {
+  background-color: rgba(56, 78, 119, 0.6);
+  border: none !important;
+}
+
+.sort-btn:hover {
+  background-color: rgba(56, 78, 119, .9);
+}
+
+.dropdown-menu {
+  border: none !important;
+  background-color: rgba(56, 78, 119, 0.6);
+  border-radius: 5px !important;
+ button {
+  color: white;
+  }
+}
+
+.dropdown-menu button:hover {
+  background-color: rgba(56, 78, 119, .9);
+  color: white;
+  text-decoration: none;
+}
+
+
