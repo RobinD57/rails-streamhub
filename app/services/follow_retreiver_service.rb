@@ -21,16 +21,21 @@ class FollowRetreiverService
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
     if followers["data"].length == 100
-      url << "&after#{followers["pagination"]["cursor"]}"
+      url << "&after#{followers["pagination"]["cursor"]}" # works for 200 follows now
+      twitch()
     end
     follow_details = TwitchReceiveStreamerDetailsService.new(followers: followers, identity: @identity).perform
     TwitchTransformService.new(follow_details: follow_details, identity: @identity).perform
   end
 
   def mixer
-    url = "https://mixer.com/api/v1/users/#{@identity.uid}/follows"
+    url = "https://mixer.com/api/v1/users/#{@identity.uid}/follows?limit=100&page=0"
     followers_serialized = open(url).read # Mixer does not require authorization for this specific API call
     followers = JSON.parse(followers_serialized)
+    if followers.length == 100
+      url.gsub("page=0", "page=1") # works for 200 follows now
+      mixer()
+    end
     MixerTransformService.new(followers).perform
   end
 
