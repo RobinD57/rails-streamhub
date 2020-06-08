@@ -12,7 +12,7 @@
   <div class="social-icons">
 
     <div class="logo-button">
-      <%= image_tag('twitchlogo-s.png') %>
+      <%= image_tag('TwitchGlitchPurple.svg', size: '70x70') %>
       <% if has_provider?(current_user, "twitch") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="logo-button">
-      <%= image_tag('mixerlogo-s.png') %>
+      <%= image_tag('MixerMerge_Dark.svg', size: '70x70') %>
       <% if has_provider?(current_user, "mixer") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
@@ -33,24 +33,25 @@
       <% end %>
     </div>
 
+
     <div class="logo-button">
-      <%= image_tag('youtubelogo-s.png') %>
-      <% if has_provider?(current_user, "youtube") %>
+      <%= image_tag('facebook-gaming-logo.svg', size: '70x70') %>
+      <% if has_provider?(current_user, "facebook") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
-        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "stream-button" do %>
+        <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
         <button type="button" class="btn btn-primary">connect</button>
         <% end %>
       <% end %>
     </div>
 
     <div class="logo-button">
-      <%= image_tag('facebooklogo-s.png') %>
-      <% if has_provider?(current_user, "facebook") %>
+      <%= image_tag('YouTube.svg', size: '70x70') %>
+      <% if has_provider?(current_user, "youtube") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
-        <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
-        <button type="button" class="btn btn-primary">connect</button>
+        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "stream-button" do %>
+          <button type="button" class="btn btn-primary">connect</button>
         <% end %>
       <% end %>
     </div>
