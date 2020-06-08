@@ -12,7 +12,7 @@
 }
 
 .signin-box {
-  padding-top: 0px;
+  padding-top: 5%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -49,6 +49,7 @@
   margin: 25px;
   display: block;
   color: #D7D7D7;
+  text-shadow: -2px 1px 6px #0e0000;
   font-family: Montserrat;
   font-weight: 200;
   flex-direction: column;
@@ -62,8 +63,8 @@
 }
 
 #giftwitch {
-  width: 50vh;
-  height: 40vh;
-  margin-top: 5%;
+  width: 450px;
+  height: 350px;
+  margin-top: 8%;
   border-radius: 5px;
 }
