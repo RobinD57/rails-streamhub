@@ -30,6 +30,11 @@ import "bootstrap";
 import { morphLogo } from '../components/navbar';
 import { scrollFinal } from '../components/navbar';
 import { quickLoad } from '../components/cards';
+import { checkLoad } from '../components/loader';
+
+
+ checkLoad();
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
