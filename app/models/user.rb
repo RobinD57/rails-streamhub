@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :identities, dependent: :destroy
   has_many :follows, through: :identities
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+  after_create :welcome_by_email
   # validates :username, presence: true
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
@@ -65,5 +66,11 @@ class User < ApplicationRecord
       end
     end
     return follows_array.flatten
+  end
+
+  private
+
+  def welcome_by_email
+    UserMailer.with(user: self).welcome.deliver_later
   end
 end
