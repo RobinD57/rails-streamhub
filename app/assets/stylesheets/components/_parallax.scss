@@ -56,6 +56,7 @@ html {
   width: 100%;
   text-align: center;
   color: #000;
+  flex-wrap: wrap;
 }
 
 .caption span.border {
@@ -67,8 +68,8 @@ html {
   border-radius: 5px;
 }
 
-// @media only screen and (max-device-width: 920px) {
-//   .bgimg1, .bgimg2, .bgimg3 {
-//     background-attachment: scroll;
-//   }
-// }
+@media only screen and (max-width: 920px) {
+  .bgimg1, .bgimg2, .bgimg3 {
+    background-attachment: scroll;
+  }
+}

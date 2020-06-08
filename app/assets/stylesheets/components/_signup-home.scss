@@ -16,6 +16,7 @@
   display: flex;
   margin: auto;
   justify-content: center;
+  flex-wrap: wrap;
   // background-color: #14223385;
   // box-shadow: 0px 0px 40px 40px #00000085
 }
@@ -40,13 +41,14 @@
 }
 
 .title-gif {
-  margin-top: 50px;
+  margin-top: 5%;
   margin-bottom: 10px;
   margin-right: 50px;
   display: block;
   color: #D7D7D7;
   font-family: Montserrat;
   font-weight: 200;
+  flex-direction: column;
 }
 
 .title-gif h1{
@@ -55,8 +57,8 @@
 }
 
 #giftwitch {
-  width: 500px;
-  height: 400px;
-  margin-top: 20px;
+  width: 50vh;
+  height: 40vh;
+  margin-top: 5%;
   border-radius: 5px;
 }
