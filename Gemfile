@@ -42,6 +42,7 @@ gem 'omniauth-google-oauth2'
 gem "activerecord-session_store"
 gem 'rest-client'
 gem 'animate.css-rails', '~> 3.2.0'
+gem 'stealth', '~> 1.1', '>= 1.1.6'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

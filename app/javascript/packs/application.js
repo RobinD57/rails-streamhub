@@ -33,8 +33,6 @@ import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
 import { firstSignUp } from '../components/first_sign_up'
 
-
-
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
