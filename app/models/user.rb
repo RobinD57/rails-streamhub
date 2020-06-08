@@ -56,8 +56,7 @@ class User < ApplicationRecord
   def get_follows
     idents = self.identities
     follows_array = idents.map do |ident|
-      follow_retreiver_service = FollowRetreiverService.new(identity: ident)
-      follow_attributes = follow_retreiver_service.perform
+      follow_attributes = FollowRetreiverService.new(identity: ident).perform
       follow_attributes.map do |attr|
        follow = Follow.new(attr)
        follow.identity = ident
