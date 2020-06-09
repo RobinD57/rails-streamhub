@@ -32,7 +32,7 @@ import { scrollFinal } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
 
-import { sort } from '../components/sort';
+//import { sort } from '../components/sort';
 
 
  checkLoad();
@@ -48,6 +48,6 @@ document.addEventListener('turbolinks:load', () => {
   morphLogo();
   scrollFinal();
   Turbolinks.setProgressBarDelay(500);
-  sort();
+  //sort();
 });
 

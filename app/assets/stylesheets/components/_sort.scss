@@ -1,20 +1,35 @@
 .sort {
-  width: 10%;
-  left: 1400px;
+  width: 13%;
+  left: 1350px;
   position: absolute;
 }
 
-.sort a:hover, .sort a:visited, .sort a:link, .sort a:active{
-  text-decoration: none;
-}
-
-.sort-btn {
-  background-color: rgba(56, 78, 119, 0.6);
-  border: none !important;
+.sort-btn{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
 }
 
 .sort-btn:hover {
-  background-color: rgba(56, 78, 119, .9);
+  text-decoration: none !important;
+}
+
+.sort a:hover, .sort a:visited, .sort a:link, .sort a:active{
+  text-decoration: none !important;
+}
+
+.sortby {
+  color: white;
+  font-size: 10px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+
+.sort-btn:hover {
+  background-color: rgba(56, 78, 119, .1);
+  text-decoration: none !important;
 }
 
 .dropdown-menu {

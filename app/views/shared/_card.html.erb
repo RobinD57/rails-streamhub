@@ -1,6 +1,6 @@
 <div class="">
   <div class="main-container mt-5">
-    <div class="row">
+    <div class="row sorted">
       <%  @follows.each do |follow| %>
         <% if follow.identity.provider == "twitch" %>
           <%= render "shared/twitch_card", :follow => follow  %>

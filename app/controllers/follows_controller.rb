@@ -10,7 +10,7 @@ class FollowsController < ApplicationController
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"
-      @follows = @follows.order(:streamer_name)
+      @follows = Follow.order_by_streamer_name
     end
 
     # load follows from user model
@@ -36,7 +36,7 @@ class FollowsController < ApplicationController
     new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
     current_user.identities.update(token:  new_access_token)
   end
-  
+
    def refresh_twitch_token
       refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
       new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
