@@ -264,6 +264,10 @@ GEM
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    simple_token_authentication (1.17.0)
+      actionmailer (>= 3.2.6, < 7)
+      actionpack (>= 3.2.6, < 7)
+      devise (>= 3.2, < 6)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -328,6 +332,7 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   omniauth-mixer
+  omniauth-oauth2 (~> 1.4)
   omniauth-twitch
   pg (>= 0.18, < 2.0)
   postmark-rails
@@ -341,6 +346,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
+  simple_token_authentication
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

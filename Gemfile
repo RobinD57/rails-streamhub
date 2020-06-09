@@ -42,6 +42,8 @@ gem 'omniauth-google-oauth2'
 gem "activerecord-session_store"
 gem 'rest-client'
 gem 'animate.css-rails', '~> 3.2.0'
+gem 'simple_token_authentication'
+gem 'omniauth-oauth2', '~> 1.4'
 
 
 group :development, :test do
