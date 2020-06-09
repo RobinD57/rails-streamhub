@@ -12,9 +12,11 @@ class FollowRetreiverService
     self.send @identity.provider
   end
 
+
   private
 
   def twitch
+    refresh_twitch_token
     url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}&first=100"
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
@@ -48,6 +50,14 @@ class FollowRetreiverService
     followers = JSON.parse(followers_serialized)
     # YoutubeTransformService.new(followers).perform
   end
+
+  def refresh_twitch_token
+    refresh_token = Identity.find_by(user: @identity).refresh_token
+    new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+    @identity.token = new_access_token
+    @identity.save
+  end
+
 end
 
 # https://www.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&mine=true&maxResults=50
