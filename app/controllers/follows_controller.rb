@@ -10,7 +10,7 @@ class FollowsController < ApplicationController
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"
-      @follows = @follows.order(:streamer_name)
+      @follows = Follow.order_by_streamer_name
     end
   end
 

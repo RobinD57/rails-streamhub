@@ -1,4 +1,8 @@
 <div class="sort">
-  <%= link_to "views", follows_path(sort: "views") %>
-  <%= link_to "alpha", follows_path(sort: "alpha") %>
+  <span class="shadowed sortby">sort by:</span>
+  <%= link_to "views", follows_path(sort: "views"), class: "shadowed sort-btn pl-1" %>
+  <span class="shadowed sortby">|</span>
+  <%= link_to "streamer", follows_path(sort: "alpha"), class: "shadowed sort-btn" %>
 </div>
+
+<%= link_to "streamer", follows_path(sort: "alpha"),remote: true, class: "shadowed sort-btn" %>

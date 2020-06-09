@@ -1,8 +1,13 @@
-const sort = () => {
-  let toggle = $( "#sort" )
-  toggle.on( "click", function() {
-    console.log("hi")
-  })
-}
+// const sort = () => {
+//   $( ".sort-btn" ).on( "click", function() {
+//     Rails.ajax({
+//       url: "/dashboard",
+//       type: "get",
+//       data: "",
+//       success: function(data) {},
+//       error: function(data) {}
+//     });
+//   });
+// }
 
-export { sort };
+// export { sort };
