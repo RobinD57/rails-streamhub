@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match '/logout', to: 'sessions#destroy', via: [:get, :post]
   resources :follows, only: [:index, :create,:destroy, :update], path: "dashboard"
+  get "dashboard/sorted_collection", to: "follows#sorted_collection"
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :follows, only: [ :index ]
