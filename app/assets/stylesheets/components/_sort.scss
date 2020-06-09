@@ -30,6 +30,25 @@
 
 }
 
+.underline {
+  position: relative;
+  display: inline-block !important;
+}
+
+.underline:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  width:100%;
+  transition: all .5s;
+}
+
 
 .sort-btn:hover {
   background-color: rgba(56, 78, 119, .1);

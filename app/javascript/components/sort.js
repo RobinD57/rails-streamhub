@@ -20,4 +20,14 @@ const fetchFollowsIndexCardsSortedByViewers = () => {
   });
 }
 
-export { fetchFollowsIndexCardsSortedByAlpha, fetchFollowsIndexCardsSortedByViewers };
+const underlineSort = () => {
+ const elements = document.querySelectorAll(".sort-btn")
+  elements.forEach((btn) => btn.addEventListener("click",() => {
+    elements.forEach((sort) => sort.classList.toggle("underline")
+    )
+  })
+)};
+
+
+export { fetchFollowsIndexCardsSortedByAlpha, fetchFollowsIndexCardsSortedByViewers,
+underlineSort };
