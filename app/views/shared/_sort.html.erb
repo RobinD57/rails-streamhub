@@ -1,8 +1,6 @@
-<div class="sort">
+<div class="sort d-flex">
   <span class="shadowed sortby">sort by:</span>
-  <%= link_to "views", follows_path(sort: "views"), class: "shadowed sort-btn pl-1" %>
-  <span class="shadowed sortby">|</span>
-  <%= link_to "streamer", follows_path(sort: "alpha"), class: "shadowed sort-btn" %>
+  <div class="shadowed sort-btn pl-2 pr-2 viewers-filter"> views </div>
+  <span class="shadowed sortby"> | </span>
+  <div class="shadowed sort-btn pl-2 alpha-filter"> streamers </div>
 </div>
-
-<%= link_to "streamer", follows_path(sort: "alpha"),remote: true, class: "shadowed sort-btn" %>
