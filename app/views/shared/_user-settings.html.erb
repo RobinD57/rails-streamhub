@@ -1,0 +1,37 @@
+<div class="outer-box-settings">
+  <button type="button" id= "close-btn" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+  <div class="auth-title">
+    <%= link_to  root_path do  %>
+    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
+    <% end %>
+    <h5>Account settings</h5>
+  </div>
+
+  <div class="settings-icons">
+
+    <div class="generic-avatar">
+      <i class="fas fa-user-circle"></i>
+    </div>
+
+    <div class="settings-button">
+        <i class="fas fa-key"></i>
+        <%= link_to edit_password_path(resource_name) do %>
+        <button type="button" class="btn btn-primary">Change password</button>
+        <% end %>
+    </div>
+
+    <div class="settings-button">
+        <i class="far fa-envelope"></i>
+
+        <button type="button" class="btn btn-primary">Change email</button>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
