@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
-  align-items: baseline;
+  align-items: flex-end;
   align-content: center;
   // background-color: #14223385;
   // box-shadow: 0px 0px 40px 40px #00000085
@@ -46,7 +46,7 @@
 }
 
 .title-gif {
-  margin: 25px;
+  margin: 20px;
   display: block;
   color: #D7D7D7;
   text-shadow: -2px 1px 6px #0e0000;
