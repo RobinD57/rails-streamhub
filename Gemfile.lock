@@ -332,6 +332,7 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   omniauth-mixer
+  omniauth-oauth2 (~> 1.4)
   omniauth-twitch
   pg (>= 0.18, < 2.0)
   postmark-rails
