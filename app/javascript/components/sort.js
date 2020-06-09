@@ -1,31 +1,23 @@
 const fetchFollowsIndexCardsSortedByAlpha = () => {
-  fetch(`/dasboard/sorted_collection?sort='alpha'`, {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-    'X-CSRF-Token': Rails.csrfToken(),
-    'Content-Type': 'application/json',
-    Accept: 'application/javascript'
-  },
-    body: JSON.stringify(body)
-}).then(response => response.json())
-  .then((data) => {
-    console.log(data);
+  document.querySelector(".alpha-filter").addEventListener("click",() => {
+     fetch(`/dashboard/sorted_collection?sort=alpha`, {
+    method: 'GET',
+    }).then(response => response.text())
+      .then((html) => {
+        document.querySelector(".reloading-area").innerHTML = html;
+    });
   });
 }
 
 const fetchFollowsIndexCardsSortedByViewers = () => {
-  fetch(`/dasboard/sorted_collection?sort='views'`, {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-    'X-CSRF-Token': Rails.csrfToken(),
-    'Content-Type': 'application/json',
-    Accept: 'application/javascript'
-  },
-    body: JSON.stringify(body)
-}).then(response => response.json())
-  .then(data)
+  document.querySelector(".viewers-filter").addEventListener("click",() => {
+    fetch(`/dashboard/sorted_collection?sort=views`, {
+    method: 'GET',
+    }).then(response => response.text())
+      .then((html) => {
+        document.querySelector(".reloading-area").innerHTML = html;
+    });
+  });
 }
 
 export { fetchFollowsIndexCardsSortedByAlpha, fetchFollowsIndexCardsSortedByViewers };
