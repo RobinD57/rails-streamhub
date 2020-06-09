@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match '/logout', to: 'sessions#destroy', via: [:get, :post]
   resources :follows, only: [:index, :create,:destroy, :update], path: "dashboard"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :follows, only: [ :index ]
+    end
+  end
 end
