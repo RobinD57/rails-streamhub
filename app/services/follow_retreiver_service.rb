@@ -9,6 +9,7 @@ class FollowRetreiverService
   end
 
   def perform
+    # refer to refresh token service object
     self.send @identity.provider
   end
 
