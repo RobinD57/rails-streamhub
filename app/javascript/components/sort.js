@@ -1,13 +1,23 @@
-// const sort = () => {
-//   $( ".sort-btn" ).on( "click", function() {
-//     Rails.ajax({
-//       url: "/dashboard",
-//       type: "get",
-//       data: "",
-//       success: function(data) {},
-//       error: function(data) {}
-//     });
-//   });
-// }
+const fetchFollowsIndexCardsSortedByAlpha = () => {
+  document.querySelector(".alpha-filter").addEventListener("click",() => {
+     fetch(`/dashboard/sorted_collection?sort=alpha`, {
+    method: 'GET',
+    }).then(response => response.text())
+      .then((html) => {
+        document.querySelector(".reloading-area").innerHTML = html;
+    });
+  });
+}
 
-// export { sort };
+const fetchFollowsIndexCardsSortedByViewers = () => {
+  document.querySelector(".viewers-filter").addEventListener("click",() => {
+    fetch(`/dashboard/sorted_collection?sort=views`, {
+    method: 'GET',
+    }).then(response => response.text())
+      .then((html) => {
+        document.querySelector(".reloading-area").innerHTML = html;
+    });
+  });
+}
+
+export { fetchFollowsIndexCardsSortedByAlpha, fetchFollowsIndexCardsSortedByViewers };

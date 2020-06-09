@@ -10,8 +10,18 @@ class FollowsController < ApplicationController
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"
-      @follows = Follow.order_by_streamer_name
+      @follows = @follows.order_by_streamer_name
     end
+  end
+
+  def sorted_collection
+    @follows = current_user.get_follows
+    if params[:sort] == "views"
+      @follows = @follows.order(viewers: :desc)
+    elsif params[:sort] == "alpha"
+      @follows = @follows.order_by_streamer_name
+    end
+    render layout: false
   end
 
   def scoped_collection

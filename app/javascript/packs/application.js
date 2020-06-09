@@ -25,14 +25,15 @@ require("channels")
 // External imports
 import "bootstrap";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { morphLogo } from '../components/navbar';
 import { scrollFinal } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
-
-//import { sort } from '../components/sort';
+import { fetchFollowsIndexCardsSortedByAlpha } from '../components/sort';
+import { fetchFollowsIndexCardsSortedByViewers } from '../components/sort';
 
 
  checkLoad();
@@ -48,6 +49,7 @@ document.addEventListener('turbolinks:load', () => {
   morphLogo();
   scrollFinal();
   Turbolinks.setProgressBarDelay(500);
-  //sort();
+  fetchFollowsIndexCardsSortedByAlpha();
+  fetchFollowsIndexCardsSortedByViewers();
 });
 
