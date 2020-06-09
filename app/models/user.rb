@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :follows, through: :identities
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
   after_create :welcome_by_email
-  acts_as_token_authenticatable
   # validates :username, presence: true
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
