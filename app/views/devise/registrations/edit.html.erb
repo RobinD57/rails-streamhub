@@ -1,5 +1,10 @@
-<title>Streamhub - Edit account</title>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="outer-box-form-edit">
+  <div class="login-title">
+    <%= link_to  root_path do  %>
+    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-big">
+    <% end %>
+    <h4>Edit <%= resource_name.to_s.humanize %></h4>
+  </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -14,23 +19,28 @@
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                input_html: { class: "login-input", placeholder: "email", autocomplete: "email" }%>
     <%= f.input :password_confirmation,
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                input_html: { class: "login-input", placeholder: "new password", autocomplete: "new-password" } %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
+                label: false,
+                input_html: { class: "login-input", placeholder: "current password", autocomplete: "current-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", { class: "submit-login-button" } %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<br>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class="d-flex justify-content-between">
+<%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "login-devise-link" %>
+<%= link_to "Back", :back, {class: "login-devise-link"} %>
 
-<%= link_to "Back", :back %>
+</div>
