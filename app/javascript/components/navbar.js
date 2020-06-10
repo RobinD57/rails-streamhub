@@ -10,9 +10,10 @@ $( ".navbar-toggler").on( "click", function() {
 const scrollShrinkFunction = () => {
   if (nav)
     document.addEventListener("scroll",(e) => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         nav.classList.add("shrink");
         logo.style.display = "none";
+        console.log(e.scrollY)
       }
     });
 };
