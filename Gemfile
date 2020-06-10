@@ -43,7 +43,6 @@ gem "activerecord-session_store"
 gem 'rest-client'
 gem 'animate.css-rails', '~> 3.2.0'
 gem 'simple_token_authentication'
-gem 'graphql'
 gem 'sprockets', '~> 3.7.2'
 
 
@@ -63,7 +62,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rspec-rails'
-  gem 'graphiql-rails'
 end
 
 group :test do
