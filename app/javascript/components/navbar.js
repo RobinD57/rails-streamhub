@@ -1,32 +1,43 @@
+const nav = document.querySelector(".navbar-main");
+const logo = document.querySelector("#logo-big");
+
 const morphLogo = () => {
 $( ".navbar-toggler").on( "click", function() {
   $( "#arrow" ).toggle();
   })
 };
 
-const scrollFunction = () => {
- $(document).on("scroll",function(){
-  if ($(document).scrollTop() > 80){
-    $(".navbar-main").addClass("shrink");
-    $("#logo-big").hide();
-    //$("#logo-small").show();
-  }else {
-      $(".navbar-main").removeClass("shrink");
-      $("#logo-big").show();
-      $("#logo-small").hide();
-    }
-  });
-}
+const scrollShrinkFunction = () => {
+  if (nav)
+    document.addEventListener("scroll",(e) => {
+      if (window.scrollY > 100) {
+        nav.classList.add("shrink");
+        logo.style.display = "none";
+      }
+    });
+};
+
+const scrollGrowFunction = () => {
+  if (nav)
+    document.addEventListener("scroll",(e) => {
+      if (window.scrollY < 120) {
+        nav.classList.remove("shrink");
+        logo.style.display = "";
+      }
+    });
+};
+
 
 const scrollFinal = () => {
-  window.onscroll = function() {scrollFunction()};
+  scrollShrinkFunction();
+  scrollGrowFunction();
 }
+
 
 const closeNav = () => {
   const elements = document.querySelectorAll(".closer");
   elements.forEach((link) => link.addEventListener("click",() => {
     document.querySelector("#navbarSupportedContent").classList.remove("show");
-    console.log("hi");
     document.querySelector("#arrow").style.display = "none";
   }));
 };

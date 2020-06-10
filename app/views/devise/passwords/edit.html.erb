@@ -1,4 +1,13 @@
-<h2>Change your password</h2>
+<title>Streamhub - Edit password</title>
+
+<div class="outer-box-form-edit">
+  <div class="login-title">
+    <%= link_to  root_path do  %>
+    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-big">
+    <% end %>
+    <h4>Change your password</h4>
+  </div>
+
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -11,15 +20,17 @@
                 label: "New password",
                 required: true,
                 autofocus: true,
+                label: false,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { class: "login-input", placeholder: "new password", autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 label: "Confirm your new password",
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                input_html: { class: "login-input", placeholder: "confirm new password" autocomplete: "new-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Change my password" %>
+    <%= f.button :submit, "Change my password", { class: "submit-login-button" }%>
   </div>
 <% end %>

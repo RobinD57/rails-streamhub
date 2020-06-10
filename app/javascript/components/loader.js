@@ -6,8 +6,11 @@
 
 const checkLoad = () => {
 window.addEventListener('load', (event) => {
-  document.querySelector(".loader-wrapper").innerHTML = " "
-  document.querySelector(".loader-wrapper").classList.add("hidden")
+  const loader = document.querySelector(".loader-wrapper")
+  if (loader) {
+    loader.innerHTML = " "
+    loader.classList.add("hidden")
+    }
   });
 }
 

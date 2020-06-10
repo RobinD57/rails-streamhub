@@ -69,6 +69,10 @@ button {
   color: white;
 }
 
+.shown {
+  display:inline-block !important;
+}
+
 #right-links {
   position: relative;
   top: 10px;
@@ -115,7 +119,7 @@ button {
   margin-top: 20px;
   padding-left: 50px;
   background: rgba(20, 34, 51, 0.8);
-  height: 300px;
+  height: 250px;
 
 }
 

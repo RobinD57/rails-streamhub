@@ -2,9 +2,6 @@ class FollowsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # if @identity
-    #   refresh_twitch_token
-    # end
     current_user.identities.map { |identity| identity.follows.delete_all } # need to increase performance!
     @follows = current_user.get_follows
     if params[:sort] == "views"
@@ -15,7 +12,7 @@ class FollowsController < ApplicationController
   end
 
   def sorted_collection
-    @follows = current_user.get_follows
+    @follows = Follow.all
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"
@@ -54,9 +51,8 @@ class FollowsController < ApplicationController
   end
 
   private
-   # def refresh_twitch_token
-   #    refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
-   #    new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform
-   #    current_user.identities.update(token:  new_access_token)
-   # end
+
+  def follows_params
+    params.require(:follow).permit(:user_name)
+  end
 end

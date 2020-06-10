@@ -1,8 +1,8 @@
 require 'json'
 require 'open-uri'
 
+
 class FollowRetreiverService
-  attr_accessor :identity
 
   def initialize(params = {})
     @identity = params[:identity]
@@ -12,11 +12,10 @@ class FollowRetreiverService
     self.send @identity.provider
   end
 
-
   private
 
   def twitch
-    refresh_twitch_token
+    twitch_refresh_access_token
     url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}&first=100"
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
@@ -31,6 +30,7 @@ class FollowRetreiverService
   end
 
   def mixer
+    mixer_refresh_access_token
     url = "https://mixer.com/api/v1/users/#{@identity.uid}/follows?limit=100&page=0"
     followers_serialized = open(url).read # Mixer does not require authorization for this specific API call
     followers = JSON.parse(followers_serialized)
@@ -51,10 +51,18 @@ class FollowRetreiverService
     # YoutubeTransformService.new(followers).perform
   end
 
-  def refresh_twitch_token
+  def twitch_refresh_access_token
     refresh_token = Identity.find(@identity.id).refresh_token
     new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform
     @identity.token = new_access_token
+    @identity.save
+  end
+
+  def mixer_refresh_access_token
+    old_refresh_token = Identity.find(@identity.id).refresh_token
+    new_token = MixerRefreshAccessTokenService.new(refresh_token: old_refresh_token).perform
+    @identity.token = new_token['access_token']
+    @identity.refresh_token = new_token['refresh_token']
     @identity.save
   end
 
@@ -64,10 +72,10 @@ end
 # => gives me all my subs
 
 # https://www.googleapis.com/youtube/v3/liveBroadcasts?part=snippet%2CcontentDetails%2Cstatus&broadcastStatus=active&broadcastType=all
-# no proper return?
+# no proper return
 
 # https://www.googleapis.com/youtube/v3/liveStreams?part=snippet%2Ccdn%2CcontentDetails%2Cstatus&id=YOUR_STREAM_ID
-
+# only properly works if it's your own broadcast
 
 # https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCHpC-6gbyYWhyV5oAYcOfMA&eventType=live&type=video
-# => Can only enter 1 id. evenType=live doesn't seem to do anything at all
+# => Can only enter 1 id, no comma-separated list of IDs as input available

@@ -39,14 +39,16 @@ import { closeNav } from '../components/navbar';
 
  checkLoad();
 
-import { firstSignUp } from '../components/first_sign_up'
+import { firstSignUp } from '../components/first_sign_up';
+import { removeQueryParams } from '../components/remove_query_params';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   checkLoad();
-  firstSignUp()
+  firstSignUp();
+  removeQueryParams();
   morphLogo();
   scrollFinal();
   Turbolinks.setProgressBarDelay(500);
