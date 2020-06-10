@@ -22,7 +22,15 @@ const scrollFinal = () => {
   window.onscroll = function() {scrollFunction()};
 }
 
-
+const closeNav = () => {
+  const elements = document.querySelectorAll(".closer");
+  elements.forEach((link) => link.addEventListener("click",() => {
+    document.querySelector("#navbarSupportedContent").classList.remove("show");
+    console.log("hi");
+    document.querySelector("#arrow").style.display = "none";
+  }));
+};
 
 export { morphLogo };
 export { scrollFinal };
+export { closeNav };
