@@ -15,7 +15,7 @@ class FollowRetreiverService
   private
 
   def twitch
-    refresh_twitch_token
+    twitch_refresh_access_token
     url = "https://api.twitch.tv/helix/users/follows?from_id=#{@identity.uid}&first=100"
     followers_serialized = open(url,
       "Client-ID" => ENV["TWITCH_APP_ID"],
@@ -30,6 +30,7 @@ class FollowRetreiverService
   end
 
   def mixer
+    mixer_refresh_access_token
     url = "https://mixer.com/api/v1/users/#{@identity.uid}/follows?limit=100&page=0"
     followers_serialized = open(url).read # Mixer does not require authorization for this specific API call
     followers = JSON.parse(followers_serialized)
@@ -50,10 +51,18 @@ class FollowRetreiverService
     # YoutubeTransformService.new(followers).perform
   end
 
-  def refresh_twitch_token
+  def twitch_refresh_access_token
     refresh_token = Identity.find(@identity.id).refresh_token
     new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform
     @identity.token = new_access_token
+    @identity.save
+  end
+
+  def mixer_refresh_access_token
+    old_refresh_token = Identity.find(@identity.id).refresh_token
+    new_token = MixerRefreshAccessTokenService.new(refresh_token: old_refresh_token).perform
+    @identity.token = new_token['access_token']
+    @identity.refresh_token = new_token['refresh_token']
     @identity.save
   end
 
