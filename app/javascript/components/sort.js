@@ -22,9 +22,9 @@ const fetchFollowsIndexCardsSortedByViewers = () => {
 
 const underlineSort = () => {
  const elements = document.querySelectorAll(".sort-btn")
-  elements.forEach((btn) => btn.addEventListener("click",() => {
-    elements.forEach((sort) => sort.classList.toggle("underline")
-    )
+  elements.forEach((btn) => btn.addEventListener("click",(e) => {
+    elements.forEach((ele) => ele.classList.remove("underline"));
+    e.currentTarget.classList.toggle("underline");
   })
 )};
 
