@@ -107,25 +107,10 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    gqli (1.0.0)
-      hashie (~> 3.0)
-      http (> 0.8, < 3.0)
-      multi_json (~> 1)
-    graphiql-rails (1.7.0)
-      railties
-      sprockets-rails
-    graphql (1.10.10)
     hashie (3.6.0)
-    http (2.2.2)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 1.0.1)
-      http_parser.rb (~> 0.6.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (1.0.3)
-    http_parser.rb (0.6.0)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -340,9 +325,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
-  gqli
-  graphiql-rails
-  graphql
   jbuilder (~> 2.7)
   launchy
   letter_opener
