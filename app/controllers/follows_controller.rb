@@ -11,6 +11,17 @@ class FollowsController < ApplicationController
     end
   end
 
+  def create
+    follow_attributes = DliveRetreiverService.new(user_name: follows_params).perform
+    follow_attributes.map do |attr|
+       follow = Follow.new(attr)
+       follow.identity = "dlive"
+       follow.save!
+       follow
+      end
+    end
+  end
+
   def sorted_collection
     @follows = Follow.all
     if params[:sort] == "views"
@@ -48,5 +59,11 @@ class FollowsController < ApplicationController
 
   def check_signed_in
     redirect_to follows_path if signed_in?
+  end
+
+  private
+
+  def follows_params
+    params.require(:follow).permit(:user_name)
   end
 end
