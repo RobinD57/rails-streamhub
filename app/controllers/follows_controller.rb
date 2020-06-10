@@ -11,17 +11,6 @@ class FollowsController < ApplicationController
     end
   end
 
-  def create
-    follow_attributes = DliveRetreiverService.new(user_name: follows_params).perform
-    follow_attributes.map do |attr|
-       follow = Follow.new(attr)
-       follow.identity = "dlive"
-       follow.save!
-       follow
-      end
-    end
-  end
-
   def sorted_collection
     @follows = Follow.all
     if params[:sort] == "views"
