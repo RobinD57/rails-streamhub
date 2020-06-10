@@ -9,6 +9,7 @@ window.addEventListener('load', (event) => {
   const loader = document.querySelector(".loader-wrapper")
   if (loader) {
     loader.innerHTML = " "
+    // loader.style.display = "none"
     loader.classList.add("hidden")
     }
   });
