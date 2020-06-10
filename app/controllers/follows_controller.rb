@@ -12,7 +12,7 @@ class FollowsController < ApplicationController
   end
 
   def sorted_collection
-    @follows = current_user.get_follows
+    @follows = Follow.all
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"

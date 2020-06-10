@@ -6,7 +6,7 @@ $( ".navbar-toggler").on( "click", function() {
 
 const scrollFunction = () => {
  $(document).on("scroll",function(){
-  if ($(document).scrollTop() > 80){
+  if ($(document).scrollTop() > 100){
     $(".navbar-main").addClass("shrink");
     $("#logo-big").hide();
     //$("#logo-small").show();
@@ -26,7 +26,6 @@ const closeNav = () => {
   const elements = document.querySelectorAll(".closer");
   elements.forEach((link) => link.addEventListener("click",() => {
     document.querySelector("#navbarSupportedContent").classList.remove("show");
-    console.log("hi");
     document.querySelector("#arrow").style.display = "none";
   }));
 };
