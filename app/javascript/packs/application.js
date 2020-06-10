@@ -34,7 +34,8 @@ import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
 import { fetchFollowsIndexCardsSortedByAlpha } from '../components/sort';
 import { fetchFollowsIndexCardsSortedByViewers } from '../components/sort';
-
+import { underlineSort } from '../components/sort';
+import { closeNav } from '../components/navbar';
 
  checkLoad();
 
@@ -51,5 +52,7 @@ document.addEventListener('turbolinks:load', () => {
   Turbolinks.setProgressBarDelay(500);
   fetchFollowsIndexCardsSortedByAlpha();
   fetchFollowsIndexCardsSortedByViewers();
+  underlineSort();
+  closeNav();
 });
 

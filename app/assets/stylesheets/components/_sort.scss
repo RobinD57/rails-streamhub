@@ -1,13 +1,13 @@
 .sort {
-  width: 13%;
-  left: 1350px;
+  width: 15%;
+  right: 10%;
   position: absolute;
 }
 
 .sort-btn{
   font-family: Montserrat;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
   opacity: 0.8;
 }
@@ -24,10 +24,30 @@
 
 .sortby {
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-family: Montserrat;
-  font-weight: bold;
+  opacity: .7;
+  flex-shrink: 0;
 
+}
+
+.underline {
+  position: relative;
+  display: inline-block !important;
+}
+
+.underline:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  width:100%;
+  transition: all .5s;
 }
 
 
