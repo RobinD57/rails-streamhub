@@ -33,14 +33,13 @@
       <% end %>
     </div>
 
-
     <div class="logo-button">
       <%= image_tag('facebook-gaming-logo.svg', size: '70x70') %>
       <% if has_provider?(current_user, "dlive") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>
         <button type="button" class="btn btn-primary">connect</button>
-      <% end %>
+        <% end %>
     </div>
 
     <div class="logo-button">
@@ -54,6 +53,5 @@
       <% end %>
     </div>
   </div>
-
 </div>
 
