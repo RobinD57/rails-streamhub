@@ -8,7 +8,6 @@ class DliveTransformService
     test = @dlive_follows.map do |follow|
       build_result_hash(follow)
     end.reject { |h| h.nil? }
-    binding.pry
   end
 
   private
