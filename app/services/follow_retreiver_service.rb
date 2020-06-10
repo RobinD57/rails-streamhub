@@ -1,8 +1,8 @@
 require 'json'
 require 'open-uri'
 
+
 class FollowRetreiverService
-  attr_accessor :identity
 
   def initialize(params = {})
     @identity = params[:identity]
@@ -11,7 +11,6 @@ class FollowRetreiverService
   def perform
     self.send @identity.provider
   end
-
 
   private
 
@@ -52,8 +51,9 @@ class FollowRetreiverService
   end
 
   def refresh_twitch_token
-    refresh_token = Identity.find_by(user: @identity.user).refresh_token
+    refresh_token = Identity.find(@identity.id).refresh_token
     new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+    binding.pry
     @identity.token = new_access_token
     @identity.save
   end
@@ -64,10 +64,10 @@ end
 # => gives me all my subs
 
 # https://www.googleapis.com/youtube/v3/liveBroadcasts?part=snippet%2CcontentDetails%2Cstatus&broadcastStatus=active&broadcastType=all
-# no proper return?
+# no proper return
 
 # https://www.googleapis.com/youtube/v3/liveStreams?part=snippet%2Ccdn%2CcontentDetails%2Cstatus&id=YOUR_STREAM_ID
-
+# only properly works if it's your own broadcast
 
 # https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCHpC-6gbyYWhyV5oAYcOfMA&eventType=live&type=video
-# => Can only enter 1 id. evenType=live doesn't seem to do anything at all
+# => Can only enter 1 id, no comma-separated list of IDs as input available
