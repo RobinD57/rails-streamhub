@@ -21,7 +21,7 @@
           <%= render "shared/modal_link" %>
         </li>
         <li class="nav-item ">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link stroke" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link stroke", data: { "data-toggle" => "collapse" } %>
         </li>
       </ul>
     </div>
