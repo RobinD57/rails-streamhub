@@ -1,6 +1,6 @@
 .sort {
-  width: 13%;
-  left: 1200px;
+  width: 15%;
+  right: 10%;
   position: absolute;
 }
 
@@ -27,6 +27,7 @@
   font-size: 12px;
   font-family: Montserrat;
   opacity: .7;
+  flex-shrink: 0;
 
 }
 
