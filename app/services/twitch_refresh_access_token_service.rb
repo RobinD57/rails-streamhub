@@ -3,7 +3,7 @@ require 'rest-client'
 require 'net/http'
 require 'uri'
 
-class RefreshTwitchAccessTokenService
+class TwitchRefreshAccessTokenService
 
   def initialize(params = {})
     @twitch_refresh_token = params[:refresh_token]
@@ -31,5 +31,5 @@ class RefreshTwitchAccessTokenService
   end
 end
 # curl -d "grant_type=refresh_token&refresh_token=p66qi0p1wd1ay14gf9884tp0eploqcvcvg6dn10bhx637j17qz&client_id=77vqrdbqf7hjl2ddf9dvff501e2izj&client_secret=ucdhv4lz3gx0rntfn8v476djbs34le" https://id.twitch.tv/oauth2/token
-# r = RefreshTwitchAccessTokenService.new(refresh_token: 'quopnd68ftirfc946jbxf26lljadrggvutjnfhlbldqhtt4qi7')
+# r = TwitchRefreshAccessTokenService.new(refresh_token: 'quopnd68ftirfc946jbxf26lljadrggvutjnfhlbldqhtt4qi7')
 # p r.perform()

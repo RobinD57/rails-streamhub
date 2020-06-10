@@ -53,7 +53,7 @@ class FollowRetreiverService
 
   def refresh_twitch_token
     refresh_token = Identity.find(@identity.id).refresh_token
-    new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+    new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform
     @identity.token = new_access_token
     @identity.save
   end

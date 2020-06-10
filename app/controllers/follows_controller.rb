@@ -56,7 +56,7 @@ class FollowsController < ApplicationController
   private
    # def refresh_twitch_token
    #    refresh_token = Identity.find_by(user: current_user, provider: 'twitch').refresh_token
-   #    new_access_token = RefreshTwitchAccessTokenService.new(refresh_token: refresh_token).perform
+   #    new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform
    #    current_user.identities.update(token:  new_access_token)
    # end
 end
