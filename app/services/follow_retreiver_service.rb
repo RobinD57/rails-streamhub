@@ -22,7 +22,7 @@ class FollowRetreiverService
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
     if followers["data"].length == 100
-      url << "&after#{followers["pagination"]["cursor"]}" # works for 200 follows now
+      url << "&after#{followers["pagination"]["cursor"]}"
       twitch()
     end
     follow_details = TwitchReceiveStreamerDetailsService.new(followers: followers, identity: @identity).perform
@@ -35,7 +35,9 @@ class FollowRetreiverService
     followers_serialized = open(url).read # Mixer does not require authorization for this specific API call
     followers = JSON.parse(followers_serialized)
     if followers.length == 100
-      url.gsub("page=0", "page=1") # works for 200 follows now
+      count = 1
+      url.gsub("page=0", "page=#{count}")
+      count += 1
       mixer()
     end
     MixerTransformService.new(followers).perform
@@ -49,6 +51,7 @@ class FollowRetreiverService
       "Authorization" => "Bearer #{@identity.token}").read
     followers = JSON.parse(followers_serialized)
     # YoutubeTransformService.new(followers).perform
+    # YouTube does not provide a good endpoint for what we are looking for
   end
 
   def twitch_refresh_access_token
