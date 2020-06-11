@@ -36,6 +36,7 @@ import { fetchFollowsIndexCardsSortedByAlpha } from '../components/sort';
 import { fetchFollowsIndexCardsSortedByViewers } from '../components/sort';
 import { underlineSort } from '../components/sort';
 import { closeNav } from '../components/navbar';
+import { initEmbeddedStream } from '../components/embedded_stream';
 
  checkLoad();
 
@@ -46,6 +47,7 @@ import { removeQueryParams } from '../components/remove_query_params';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initEmbeddedStream()
   checkLoad();
   firstSignUp();
   removeQueryParams();
