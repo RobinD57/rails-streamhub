@@ -7,31 +7,20 @@ $( ".navbar-toggler").on( "click", function() {
   })
 };
 
-const scrollShrinkFunction = () => {
-  if (nav)
+const scrollFunction = () => {
+  if (nav) {
     document.addEventListener("scroll",(e) => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 60 && !nav.classList.contains("shrink")) {
         nav.classList.add("shrink");
         logo.style.display = "none";
       }
-    });
-};
-
-const scrollGrowFunction = () => {
-  if (nav)
-    document.addEventListener("scroll",(e) => {
-      if (window.scrollY < 120) {
+      else if (window.scrollY < 60 && nav.classList.contains("shrink")) {
         nav.classList.remove("shrink");
         logo.style.display = "";
       }
     });
+  }
 };
-
-
-const scrollFinal = () => {
-  scrollShrinkFunction();
-  scrollGrowFunction();
-}
 
 
 const closeNav = () => {
@@ -43,5 +32,5 @@ const closeNav = () => {
 };
 
 export { morphLogo };
-export { scrollFinal };
+export { scrollFunction };
 export { closeNav };
