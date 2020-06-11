@@ -30,8 +30,3 @@ class MixerRefreshAccessTokenService
 		return jsonrespone
 	end
 end
-
-# curl -d "grant_type=refresh_token&refresh_token=&client_id=&client_secret=" https://mixer.com/api/v1/oauth/token
-
-# r = MixerRefreshAccessTokenService.new
-# p r.perform

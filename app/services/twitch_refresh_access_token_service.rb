@@ -30,6 +30,3 @@ class TwitchRefreshAccessTokenService
     jsonrespone['access_token']
   end
 end
-# curl -d "grant_type=refresh_token&refresh_token=&client_id=&client_secret=" https://id.twitch.tv/oauth2/token
-# r = TwitchRefreshAccessTokenService.new(refresh_token: '')
-# p r.perform()

@@ -1,4 +1,5 @@
-# additional service object for Dlive as the process is way different
+# additional service object for Dlive as the process is different as we don't
+# have permission to use OAuth from them yet
 require 'uri'
 require 'json'
 require 'open-uri'
