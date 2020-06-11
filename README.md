@@ -2,8 +2,6 @@
 
 > Streamhub is the quickest way to find out who is streaming, which game, and in which platform. With our consolidated Dashboard, you can effortlessly see all the relevant information and navigate to your favorite streaming with just one click, regardless of which platform.
 
-----
-
 ## Usage example
 
 Tired of visiting many streaming services to find a particual streamer? Go checkout Streamhub and find all your services combined into one.
@@ -16,14 +14,10 @@ Tired of visiting many streaming services to find a particual streamer? Go check
 
 ## Screenshots & Media
 
----
-
 ## Release History
 
 * 1.0 - 12.06.2020
     * First release
-
-----
 
 ## Creators & Developers
 
@@ -34,8 +28,6 @@ Tired of visiting many streaming services to find a particual streamer? Go check
 - Adam Sebesta – [@adamsebesta](https://github.com/adamsebesta)
 
 - Sebastian Jooß – [@joobaa](https://github.com/joobaa)
-
-----
 
 ## Contributing
 
