@@ -2,7 +2,7 @@
   background: #263445f5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  margin: 25px;
+  margin-left: 25px;
   padding-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
@@ -10,10 +10,12 @@
   height: 500px;
   width: 380px;
   margin-right: 5%;
+  margin-bottom:0px;
+  margin-top: 20px;
 }
 
 .signin-box {
-  padding-top: 5%;
+  padding-top: 3%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -25,18 +27,19 @@
 }
 
 .signin-button {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 14px;
   background-color: #5c68a9;
   padding-top: 11px;
   border-radius: 5px;
   font-family: Montserrat;
-  height: 7vh;
+  height: 62px;
   i {
     font-size: 30px;
     margin-top: 4px;
     margin-right: 5px;
+    margin-left: 50px;
   }
 }
 .signin-button:hover {
@@ -44,7 +47,11 @@
 }
 
 .spaced {
-  margin-top: 12%;
+  margin-top: 4%;
+}
+
+.extra-spaced {
+  margin-top: 11%;
 }
 
 .signin-button span {
@@ -53,7 +60,8 @@
 }
 
 .title-gif {
-  margin: 20px;
+  margin-top: 20px;
+  padding-top: 63px;
   display: block;
   color: #D7D7D7;
   text-shadow: -2px 1px 6px #0e0000;
@@ -69,13 +77,15 @@
   font-weight: 600px;
   margin:auto;
   padding: 10px;
+  margin-top: 20px;
 }
 
 #giftwitch {
-  width: 550px;
-  height: 350px;
-  margin-top: 8%;
+  width: 600px;
+  height: 360px;
+  margin-top: 5.2%;
   border-radius: 5px;
+  object-fit:fill;
 }
 
 @media only screen and (max-width: 1440px) {
