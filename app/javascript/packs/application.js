@@ -28,7 +28,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { morphLogo } from '../components/navbar';
+import { toggleCaret } from '../components/navbar';
 import { shrinkAndGrowNav } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
@@ -49,7 +49,7 @@ document.addEventListener('turbolinks:load', () => {
   checkLoad();
   firstSignUp();
   removeQueryParams();
-  morphLogo();
+  toggleCaret();
   shrinkAndGrowNav();
   Turbolinks.setProgressBarDelay(500);
   fetchFollowsIndexCardsSortedByAlpha();
