@@ -17,7 +17,7 @@ class MixerTransformService
     if follow["online"]
       result_hash = {
         game_title: follow["type"]["name"],
-        viewers: follow["type"]["viewersCurrent"],
+        viewers: follow["viewersCurrent"],
         stream_title: follow["name"],
         streamer_name: follow["token"],
         thumbnail: "https://thumbs.mixer.com/channel/#{follow["id"]}.small.jpg",
