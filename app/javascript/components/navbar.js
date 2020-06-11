@@ -7,14 +7,14 @@ $( ".navbar-toggler").on( "click", function() {
   })
 };
 
-const scrollFunction = () => {
+const shrinkAndGrowNav = () => {
   if (nav) {
     document.addEventListener("scroll",(e) => {
-      if (window.scrollY > 65 && !nav.classList.contains("shrink")) {
+      if (window.scrollY > 67 && !nav.classList.contains("shrink")) {
         nav.classList.add("shrink");
         logo.style.display = "none";
       }
-      else if (window.scrollY < 65 && nav.classList.contains("shrink")) {
+      else if (window.scrollY < 67 && nav.classList.contains("shrink")) {
         nav.classList.remove("shrink");
         logo.style.display = "";
       }
@@ -32,5 +32,5 @@ const closeNav = () => {
 };
 
 export { morphLogo };
-export { scrollFunction };
+export { shrinkAndGrowNav };
 export { closeNav };
