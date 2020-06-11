@@ -8,7 +8,7 @@ const toggleCaret = () => {
       if (!navExpanse.classList.contains("show")) {
         document.querySelector("#arrow").style.display = "inline-block";
       }
-      else if (navExpanse.classList.contains("show")) {
+       else if (navExpanse.classList.contains("show")) {
         document.querySelector("#arrow").style.display = "none";
       }
     }
@@ -27,7 +27,7 @@ const shrinkAndGrowNav = () => {
         logo.style.display = "";
       }
     });
-  };
+  }
 };
 
 
