@@ -7,7 +7,7 @@ require 'open-uri'
 class DliveRetreiverService
 
   def initialize(params = {})
-    @user_name = params[:user_name]
+    @username = params[:username]
   end
 
   def perform
@@ -17,7 +17,7 @@ class DliveRetreiverService
   private
 
   def dlive
-    url = URI.encode("https://graphigo.prd.dlive.tv/?query={userByDisplayName(displayname:\"#{@user_name}\"){following{list{username avatar displayname livestream{title thumbnailUrl watchingCount category{title imgUrl }}}}}}")
+    url = URI.encode("https://graphigo.prd.dlive.tv/?query={userByDisplayName(displayname:\"#{@username}\"){following{list{username avatar displayname livestream{title thumbnailUrl watchingCount category{title imgUrl }}}}}}")
     followers_serialized = open(url).read
     followers = JSON.parse(followers_serialized)
     DliveTransformService.new(followers.dig("data", "userByDisplayName", "following", "list")).perform
