@@ -29,7 +29,7 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { morphLogo } from '../components/navbar';
-import { scrollFinal } from '../components/navbar';
+import { scrollFunction } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
 import { fetchFollowsIndexCardsSortedByAlpha } from '../components/sort';
@@ -50,7 +50,7 @@ document.addEventListener('turbolinks:load', () => {
   firstSignUp();
   removeQueryParams();
   morphLogo();
-  scrollFinal();
+  scrollFunction();
   Turbolinks.setProgressBarDelay(500);
   fetchFollowsIndexCardsSortedByAlpha();
   fetchFollowsIndexCardsSortedByViewers();

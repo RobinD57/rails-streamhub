@@ -7,34 +7,19 @@ $( ".navbar-toggler").on( "click", function() {
   })
 };
 
-const scrollShrinkFunction = () => {
+const scrollFunction = () => {
   if (nav) {
     document.addEventListener("scroll",(e) => {
       if (window.scrollY > 60 && !nav.classList.contains("shrink")) {
         nav.classList.add("shrink");
         logo.style.display = "none";
-        console.log(window.scrollY);
-      };
-    });
-  };
-};
-
-const scrollGrowFunction = () => {
-  if (nav.classList.contains("shrink")) {
-    document.addEventListener("scroll",(e) => {
-      if (window.scrollY < 120 && window.scrollY > 60) {
+      }
+      else if (window.scrollY < 60 && nav.classList.contains("shrink")) {
         nav.classList.remove("shrink");
         logo.style.display = "";
-        console.log(window.scrollY);
-      };
+      }
     });
-  };
-};
-
-
-const scrollFinal = () => {
-  scrollShrinkFunction();
-  scrollGrowFunction();
+  }
 };
 
 
@@ -47,5 +32,5 @@ const closeNav = () => {
 };
 
 export { morphLogo };
-export { scrollFinal };
+export { scrollFunction };
 export { closeNav };
