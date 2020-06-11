@@ -1,6 +1,7 @@
 .main-container {
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 200px;
 }
 
 a:hover, a:visited, a:link, a:active{
@@ -54,24 +55,27 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .overlay2 {
-  position: relative;
+  position: absolute;
   opacity: 0;
   border-radius: 5px !important;
   z-index:1;
   visibility: hidden;
   height: 100%;
   width: 50%;
+  bottom: 0;
+  left: 200px;
+  text-align: right;
 }
 
 .overlay2 img {
-  position: relative;
   height: 35%;
   width: 35%;
   object-fit: cover;
   border-radius: 3px !important;
   opacity: .95;
-  bottom: 185px;
-  left: 312px;
+  vertical-align: bottom;
+  margin-top: 154px;
+  margin-right: 19px;
 }
 
 .main-card:hover .overlay2 {

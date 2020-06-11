@@ -1,43 +1,49 @@
 <div class="outer-box-form-home">
   <div class="login-title">
-    <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
-    <h6>Find who is streaming, and where.</h6>
+    <h6 class="spaced">Find who is streaming, and where.</h6>
   </div>
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                label: false,
-                input_html: { class: "login-input", placeholder: "email", autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                label: false,
-                input_html: { class: "login-input", placeholder: "password", autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
+  <div class='signin-button shadowed box-shadow extra-spaced'><i class="fab fa-twitch shadowed"> </i><span class="shadowed"> Sign in with Twitch</span></div>
+  <% end %>
+  <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
+  <div class='signin-button shadowed box-shadow spaced'><i class="fab fa-mixer shadowed"> </i><span class="shadowed"> Sign in with Mixer </span></div>
+  <% end %>
+  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
+  <div class='signin-button shadowed box-shadow spaced'><i class="fas fa-user-ninja shadowed"> </i><span class="shadowed"> Sign in with Dlive</span></div>
+  <% end %>
+  <%= link_to user_google_oauth2_omniauth_authorize_path, class: "stream-button" do %>
+  <div class='signin-button shadowed box-shadow spaced'><i class="fab fa-youtube shadowed"> </i><span class="shadowed"> Sign in with Youtube </span></div>
+  <% end %>
+
+  <div class="d-flex justify-content-center">
+    <hr class="divider" />
   </div>
+
+ <!--  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+      required: false,
+      autofocus: true,
+      label: false,
+      input_html: { class: "login-input", placeholder: "email", autocomplete: "email" } %>
+      <%= f.input :password,
+      required: false,
+      label: false,
+      input_html: { class: "login-input", placeholder: "password", autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
 
   <div class="form-actions">
     <%= f.button :submit, "Log in", { class: "submit-login-button" }%>
   </div>
-<% end %>
+  <% end %> -->
 
-<div class="d-flex justify-content-between">
-  <%= link_to "Sign up", new_registration_path(resource_name), {class: "signup-devise-link"} %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), {class: "forgotpass-devise-link"} %>
-</div>
-
-<div class="d-flex justify-content-center">
-  <hr/>
-</div>
-
-
-  <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
-    <div class='signin-button'><i class="fab fa-twitch"> </i><span> Sign in with Twitch</span></div>
-  <% end %>
-  <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
-    <div class='signin-button'><i class="fab fa-mixer"> </i><span> Sign in with Mixer </span></div>
-  <% end %>
+  <div class="text-center">
+    <%= link_to "Sign up with email", new_registration_path(resource_name), {class: "signup-devise-link shadowed white mt-2 stroke"} %>
+    <br>
+    <br>
+    <!-- <%= link_to "Forgot your password?", new_password_path(resource_name), {class: "forgotpass-devise-link shadowed white stroke"} %> -->
+  </div>
 
 </div>
 

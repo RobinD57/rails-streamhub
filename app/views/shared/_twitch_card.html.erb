@@ -25,10 +25,10 @@
           </div>
           <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-3"> <%= follow.streamer_name  %> </h5>
           <p id="streamer-game-pop-up" class="text-left ml-2 shadowed game"> <%= follow.game_title  %></p>
+          <div class="overlay2 overlayFade2 shadowed">
+            <%= image_tag follow.box_art, alt: "alttext" %>
+          </div>
         </div>
-      </div>
-      <div class="overlay2 overlayFade2 shadowed">
-        <%= image_tag follow.box_art, alt: "alttext" %>
       </div>
     </div>
   </div>

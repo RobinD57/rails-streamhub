@@ -1,18 +1,21 @@
 .outer-box-form-home {
-  background: #263445f5;
+  background: #263445e3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  margin: 25px;
+  margin-left: 25px;
   padding-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   height: 500px;
   width: 380px;
+  margin-right: 3%;
+  margin-bottom:9px;
+  // margin-top: 20px;
 }
 
 .signin-box {
-  padding-top: 5%;
+  padding-top: 3%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -24,29 +27,41 @@
 }
 
 .signin-button {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 14px;
   background-color: #5c68a9;
-  padding: 5px;
+  padding-top: 11px;
   border-radius: 5px;
   font-family: Montserrat;
+  height: 62px;
   i {
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 4px;
     margin-right: 5px;
+    margin-left: 50px;
   }
 }
 .signin-button:hover {
   background-color: #6d7bc9;
 }
 
+.spaced {
+  margin-top: 4%;
+}
+
+.extra-spaced {
+  margin-top: 11%;
+}
+
 .signin-button span {
   vertical-align: super;
+  font-size: 15px;
 }
 
 .title-gif {
-  margin: 20px;
+  // margin-top: 20px;
+  // padding-top: 63px;
   display: block;
   color: #D7D7D7;
   text-shadow: -2px 1px 6px #0e0000;
@@ -55,20 +70,24 @@
   flex-direction: column;
   flex-shrink: 1;
   text-align: center;
+  justify-content: space-around;
 }
 
 .title-gif h1{
   font-family: Montserrat;
-  font-weight: 600px;
-  margin:auto;
-  padding: 10px;
+  // font-weight: 600px;
+  // margin:auto;
+  // padding: 10px;
+  // margin-top: 20px;
 }
 
 #giftwitch {
-  width: 550px;
-  height: 350px;
-  margin-top: 8%;
+  width: 600px;
+  height: 360px;
+  margin-top: 50px;
   border-radius: 5px;
+  // padding: 10px;
+  object-fit:fill;
 }
 
 @media only screen and (max-width: 1440px) {
