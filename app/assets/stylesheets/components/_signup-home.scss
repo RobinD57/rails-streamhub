@@ -13,7 +13,7 @@
 }
 
 .signin-box {
-  padding-top: 5%;
+  padding-top: 3%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -32,7 +32,7 @@
   padding-top: 11px;
   border-radius: 5px;
   font-family: Montserrat;
-  height: 7vh;
+  height: 62px;
   i {
     font-size: 30px;
     margin-top: 4px;
@@ -54,6 +54,7 @@
 
 .title-gif {
   margin: 20px;
+  padding-top: 60px;
   display: block;
   color: #D7D7D7;
   text-shadow: -2px 1px 6px #0e0000;
@@ -69,12 +70,13 @@
   font-weight: 600px;
   margin:auto;
   padding: 10px;
+  margin-top: 20px;
 }
 
 #giftwitch {
   width: 550px;
   height: 350px;
-  margin-top: 8%;
+  margin-top: 7%;
   border-radius: 5px;
 }
 
