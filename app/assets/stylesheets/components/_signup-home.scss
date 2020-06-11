@@ -9,6 +9,7 @@
   padding-bottom: 30px;
   height: 500px;
   width: 380px;
+  margin-right: 5%;
 }
 
 .signin-box {
@@ -28,11 +29,12 @@
   color: white;
   font-size: 14px;
   background-color: #5c68a9;
-  padding: 5px;
+  padding-top: 11px;
   border-radius: 5px;
   font-family: Montserrat;
+  height: 7vh;
   i {
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 4px;
     margin-right: 5px;
   }
@@ -41,8 +43,13 @@
   background-color: #6d7bc9;
 }
 
+.spaced {
+  margin-top: 12%;
+}
+
 .signin-button span {
   vertical-align: super;
+  font-size: 15px;
 }
 
 .title-gif {
