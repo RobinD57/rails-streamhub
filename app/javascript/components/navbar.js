@@ -10,16 +10,16 @@ $( ".navbar-toggler").on( "click", function() {
 const scrollFunction = () => {
   if (nav) {
     document.addEventListener("scroll",(e) => {
-      if (window.scrollY > 60 && !nav.classList.contains("shrink")) {
+      if (window.scrollY > 65 && !nav.classList.contains("shrink")) {
         nav.classList.add("shrink");
         logo.style.display = "none";
       }
-      else if (window.scrollY < 60 && nav.classList.contains("shrink")) {
+      else if (window.scrollY < 65 && nav.classList.contains("shrink")) {
         nav.classList.remove("shrink");
         logo.style.display = "";
       }
     });
-  }
+  };
 };
 
 
