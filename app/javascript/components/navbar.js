@@ -1,10 +1,18 @@
 const nav = document.querySelector(".navbar-main");
 const logo = document.querySelector("#logo-big");
+const navExpanse = document.querySelector("#navbarSupportedContent");
 
-const morphLogo = () => {
-$( ".navbar-toggler").on( "click", function() {
-  $( "#arrow" ).toggle();
-  })
+const toggleCaret = () => {
+  document.querySelector(".navbar-toggler").addEventListener( "click",() => {
+    if (nav) {
+      if (!navExpanse.classList.contains("show")) {
+        document.querySelector("#arrow").style.display = "inline-block";
+      }
+      else if (navExpanse.classList.contains("show")) {
+        document.querySelector("#arrow").style.display = "none";
+      }
+    }
+  });
 };
 
 const shrinkAndGrowNav = () => {
@@ -31,6 +39,6 @@ const closeNav = () => {
   }));
 };
 
-export { morphLogo };
+export { toggleCaret };
 export { shrinkAndGrowNav };
 export { closeNav };
