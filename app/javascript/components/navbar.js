@@ -3,16 +3,18 @@ const logo = document.querySelector("#logo-big");
 const navExpanse = document.querySelector("#navbarSupportedContent");
 
 const toggleCaret = () => {
-  document.querySelector(".navbar-toggler").addEventListener( "click",() => {
-    if (nav) {
-      if (!navExpanse.classList.contains("show")) {
-        document.querySelector("#arrow").style.display = "inline-block";
+  if (document.querySelector(".navbar-toggler") != undefined) {
+    document.querySelector(".navbar-toggler").addEventListener( "click",() => {
+      if (nav) {
+        if (!navExpanse.classList.contains("show")) {
+          document.querySelector("#arrow").style.display = "inline-block";
+        }
+         else if (navExpanse.classList.contains("show")) {
+          document.querySelector("#arrow").style.display = "none";
+        }
       }
-       else if (navExpanse.classList.contains("show")) {
-        document.querySelector("#arrow").style.display = "none";
-      }
-    }
-  });
+    });
+  }
 };
 
 const shrinkAndGrowNav = () => {
