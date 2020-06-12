@@ -2,10 +2,11 @@ const nav = document.querySelector(".navbar-main");
 const logo = document.querySelector("#logo-big");
 const navExpanse = document.querySelector("#navbarSupportedContent");
 const arrow = document.querySelector("#arrow");
+const toggler = document.querySelector(".navbar-toggler");
 
 const toggleCaret = () => {
-  if (document.querySelector(".navbar-toggler") != undefined) {
-    document.querySelector(".navbar-toggler").addEventListener( "click",() => {
+  if ( toggler != undefined) {
+    toggler.addEventListener( "click",() => {
       if (nav) {
         if (!navExpanse.classList.contains("show")) {
           arrow.style.display = "inline-block";
