@@ -4,6 +4,7 @@ const navExpanse = document.querySelector("#navbarSupportedContent");
 const arrow = document.querySelector("#arrow");
 const toggler = document.querySelector(".navbar-toggler");
 
+
 const toggleCaret = () => {
   if ( toggler != undefined) {
     toggler.addEventListener( "click",() => {
@@ -25,15 +26,16 @@ const shrinkAndGrowNav = () => {
       if (window.scrollY > 67 && !nav.classList.contains("shrink")) {
         nav.classList.add("shrink");
         logo.style.display = "none";
+        toggler.classList.add("padded");
       }
       else if (window.scrollY < 67 && nav.classList.contains("shrink")) {
         nav.classList.remove("shrink");
         logo.style.display = "";
+        toggler.classList.remove("padded");
       }
     });
   }
 };
-
 
 const closeNav = () => {
   const elements = document.querySelectorAll(".closer");

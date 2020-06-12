@@ -22,5 +22,4 @@ const underlineSort = () => {
   };
 }
 
-
 export { fetchFollowsIndexCardsSorted, underlineSort };
