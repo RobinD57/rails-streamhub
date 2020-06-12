@@ -1,13 +1,3 @@
-<div class="">
-  <div class="main-container">
-    <div class="row sorted">
-      <%  @follows.each do |follow| %>
-        <% if follow.identity.provider == "twitch" %>
-          <%= render "shared/twitch_card", :follow => follow  %>
-        <% else %>
-          <%= render "shared/mixer_card", :follow => follow  %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render "shared/cards" %>
+
+
