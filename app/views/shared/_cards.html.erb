@@ -3,9 +3,13 @@
     <div class="row sorted">
       <%  @follows.each do |follow| %>
         <% if follow.identity.provider == "twitch" %>
-          <%= render "shared/card_template", :follow => follow, :provider => follow.identity.provider, :provider_url => follow.identity.provider + ".tv" %>
+          <%= render "shared/card_template", :follow => follow,
+                                             :provider => follow.identity.provider,
+                                             :provider_url => follow.identity.provider + ".tv" %>
         <% else %>
-          <%= render "shared/card_template", :follow => follow, :provider => follow.identity.provider, :provider_url => follow.identity.provider + ".com" %>
+          <%= render "shared/card_template", :follow => follow,
+                                             :provider => follow.identity.provider,
+                                             :provider_url => follow.identity.provider + ".com" %>
         <% end %>
       <% end %>
     </div>
