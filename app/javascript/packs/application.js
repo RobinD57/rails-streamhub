@@ -32,28 +32,22 @@ import { toggleCaret } from '../components/navbar';
 import { shrinkAndGrowNav } from '../components/navbar';
 import { quickLoad } from '../components/cards';
 import { checkLoad } from '../components/loader';
-import { fetchFollowsIndexCardsSortedByAlpha } from '../components/sort';
-import { fetchFollowsIndexCardsSortedByViewers } from '../components/sort';
+import { fetchFollowsIndexCardsSorted } from '../components/sort';
 import { underlineSort } from '../components/sort';
 import { closeNav } from '../components/navbar';
-
- checkLoad();
-
 import { firstSignUp } from '../components/first_sign_up';
 import { removeQueryParams } from '../components/remove_query_params';
 
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
   checkLoad();
   firstSignUp();
   removeQueryParams();
   toggleCaret();
   shrinkAndGrowNav();
   Turbolinks.setProgressBarDelay(500);
-  fetchFollowsIndexCardsSortedByAlpha();
-  fetchFollowsIndexCardsSortedByViewers();
+  fetchFollowsIndexCardsSorted(".alpha-filter", "alpha");
+  fetchFollowsIndexCardsSorted(".views-filter", "views");
   underlineSort();
   closeNav();
 });

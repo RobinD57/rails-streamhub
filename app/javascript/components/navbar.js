@@ -34,7 +34,7 @@ const shrinkAndGrowNav = () => {
 const closeNav = () => {
   const elements = document.querySelectorAll(".closer");
   elements.forEach((link) => link.addEventListener("click",() => {
-    document.querySelector("#navbarSupportedContent").classList.remove("show");
+    navExpanse.classList.remove("show");
     document.querySelector("#arrow").style.display = "none";
   }));
 };
