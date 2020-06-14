@@ -1,10 +1,10 @@
 # Streamhub - Your favorite streamers in one click
 
-> Streamhub is the quickest way to find out who is streaming, which game, and in which platform. With our consolidated Dashboard, you can effortlessly see all the relevant information and navigate to your favorite streaming with just one click, regardless of which platform.
+> Streamhub is the quickest way to find out who is streaming on which platform and which game they are playing. Our dashboard allows you to easily consolidate all your follows from multiple platforms and gives you all the relevant information quickly, while also allowing you to your favorite stream with just one click.
 
-## Usage example
+## Usage
 
-Tired of visiting many streaming services to find a particual streamer? Go checkout Streamhub and find all your services combined into one.
+Tired of visiting many streaming services to find out whether a particual streamer is online? Go checkout Streamhub and get an overview of all your follows instantly.
 
 * Visit https://streamhub.watch
 * Register/Log in with OAuth
