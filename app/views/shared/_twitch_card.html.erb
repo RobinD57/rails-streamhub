@@ -15,7 +15,6 @@
         </div>
       </div>
       <div class="overlay1 overlayFade1">
-        <div class="embedWrapper"></div>
         <div class="text-card1">
           <div class="text-center">
             <p id="stream-title" class='shadowed'>
@@ -30,6 +29,9 @@
           </div>
         </div>
       </div>
+      <%= content_tag :div, class: "embedWrapper", data: { source: 'twitch', streamer: "#{follow.streamer_name}" } do %>
+        <% content_tag(:iframe, "", style: "position: absolute; top: 0; left: 0;", allowfullscreen: "true", src: "", width: "400", height: "250") %>
+      <% end %>
     </div>
   </div>
 <% end %>

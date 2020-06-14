@@ -3,7 +3,7 @@
     <div class="main-card box-shadow" style = "background: url(<%= follow.thumbnail %>); background-size: cover">
       <div id="viewer-background" class="box-shadow">
         <p class="viewer-count text-center pl-2 mr-1 mt-1 shadowed">
-          <%=follow.viewers.to_s.reverse.scan(/\d{3}|.+/).join(",").reverse %>
+          <%= follow.viewers.to_s.reverse.scan(/\d{3}|.+/).join(",").reverse %>
           <i class="fas fa-eye views"></i>
         </p>
       </div>
@@ -29,9 +29,9 @@
           </div>
         </div>
       </div>
-      <div class="embedWrapper">
-        <iframe style="position: absolute; top: 0; left: 0;" title="PaladinsGame\'s player frame" i18n-title="channel#ShareDialog:playerEmbedFrame|Embed player Frame copied from share dialog" allowfullscreen="true" src="" width="400" height="250"> </iframe>'
-      </div>
+      <%= content_tag :div, class: "embedWrapper", data: { source: 'mixer', streamer: "#{follow.streamer_name}" } do %>
+        <% content_tag(:iframe, "", style: "position: absolute; top: 0; left: 0;", allowfullscreen: "true", src: "", width: "400", height: "250") %>
+      <% end %>
     </div>
   </div>
 <% end %>
