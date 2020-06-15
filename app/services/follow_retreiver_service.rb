@@ -54,6 +54,10 @@ class FollowRetreiverService
     # YouTube does not provide a good endpoint for what we are looking for
   end
 
+  def dlive
+    follow_details = DliveRetreiverService.new(@identity.user.username).perform
+  end
+
   def twitch_refresh_access_token
     refresh_token = Identity.find(@identity.id).refresh_token
     new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform

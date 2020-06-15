@@ -1,11 +1,12 @@
 class DliveTransformService
+
   def initialize(params = {})
     @dlive_follows = params
   end
 
 
   def perform
-    test = @dlive_follows.map do |follow|
+    @dlive_follows.map do |follow|
       build_result_hash(follow)
     end.reject { |h| h.nil? }
   end

@@ -8,11 +8,12 @@ require 'open-uri'
 class DliveRetreiverService
 
   def initialize(params = {})
-    @username = params[:username]
+    @username = params
   end
 
   def perform
     dlive
+
   end
 
   private

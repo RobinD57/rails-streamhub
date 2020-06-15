@@ -17,6 +17,11 @@ class FollowsController < ApplicationController
     render layout: false
   end
 
+  def dlive
+    Identity.create!(provider: "dlive", uid: rand(1..50000), user: current_user)
+    DliveRetreiverService.new(username: current_user.username)
+  end
+
   private
 
   def follows_params
