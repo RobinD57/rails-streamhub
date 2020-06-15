@@ -1,9 +1,9 @@
-<%= link_to "https://www.#{provider_url}/#{follow.streamer_name}", target: :_blank, rel: :prerender, class: "card-click" do  %>
+<%= link_to "https://www.twitch.tv/#{follow.streamer_name}", target: :_blank,  rel: :prerender, class: "card-click" do  %>
   <div class="col-lg-6 col-xl-3 p-0">
     <div class="main-card box-shadow" style = "background: url(<%= follow.thumbnail %>); background-size: cover">
-      <div id="viewer-background" class="box-shadow">
+      <div id="viewer-background" class="box-shadow text-center">
         <p class="viewer-count text-center pl-2 mr-1 mt-1 shadowed">
-          <%=follow.viewers.to_s.reverse.scan(/\d{3}|.+/).join(",").reverse %>
+          <%= follow.viewers.to_s.reverse.scan(/\d{3}|.+/).join(",").reverse %>
           <i class="fas fa-eye views"></i>
         </p>
       </div>
@@ -20,7 +20,7 @@
             <p id="stream-title" class='shadowed'>
               <%= follow.stream_title.length > 35 ? follow.stream_title.first(35) + "..." : follow.stream_title %>
             </p>
-            <i id="" class="text-center shadowed fab fa-<%=provider%> provider-icon"></i>
+            <i id="" class="text-center shadowed fab fa-twitch provider-icon "></i>
           </div>
           <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-3"> <%= follow.streamer_name  %> </h5>
           <p id="streamer-game-pop-up" class="text-left ml-2 shadowed game"> <%= follow.game_title  %></p>
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <%= content_tag :div, class: "embedWrapper", data: { source: "#{provider}", streamer: "#{follow.streamer_name}" } do %>
+      <%= content_tag :div, class: "embedWrapper", data: { source: 'twitch', streamer: "#{follow.streamer_name}" } do %>
         <% content_tag(:iframe, "", style: "position: absolute; top: 0; left: 0;", allowfullscreen: "true", src: "", width: "400", height: "250") %>
       <% end %>
     </div>
