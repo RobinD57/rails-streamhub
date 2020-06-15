@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'letter_opener', group: :development
 gem 'postmark-rails'
+gem 'bullet', group: 'development'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
