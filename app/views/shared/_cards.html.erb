@@ -9,7 +9,7 @@
         <% else %>
           <%= render "shared/card_template", :follow => follow,
                                              :provider => follow.identity.provider,
-                                             :provider_url => follow.identity.provider + ".com" %>
+                                             :provider_url => follow.identity.provider +  ".com" %>
         <% end %>
       <% end %>
     </div>

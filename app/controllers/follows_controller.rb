@@ -8,7 +8,7 @@ class FollowsController < ApplicationController
 
   def sorted_collection
     @follows = current_user.identities.map { |identity| Follow.where(identity_id: identity.id) }.flatten
-    @follows = Follow.where(id: @follows.map(&:id))
+    @follows = Follow.includes([:identity]).where(id: @follows.map(&:id))
     if params[:sort] == "views"
       @follows = @follows.order(viewers: :desc)
     elsif params[:sort] == "alpha"
