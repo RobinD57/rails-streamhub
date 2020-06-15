@@ -35,7 +35,6 @@ import { checkLoad } from '../components/loader';
 import { fetchFollowsIndexCardsSorted } from '../components/sort';
 import { underlineSort } from '../components/sort';
 import { closeNav } from '../components/navbar';
-<<<<<<< HEAD
 import { initEmbeddedStream } from '../components/embedded_stream';
 
 import { firstSignUp } from '../components/first_sign_up';
