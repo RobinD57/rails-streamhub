@@ -1,29 +1,31 @@
 <title>Streamhub - Dashboard</title>
 
-<%= render "shared/navbar" %>
-<div style= "height:150px; width: 100%"></div>
-<div class="reloading-area">
-  <%= render "shared/card" %>
-</div>
-<%= render "shared/loader" %>
+<div id="page-container">
+  <%= render "shared/navbar" %>
+  <div style= "height:150px; width: 100%"></div>
+  <div class="reloading-area">
+    <%= render "shared/cards" %>
+  </div>
+  <%= render "shared/loader" %>
 
-<div id="modal-window" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg clear" role="document">
-    <div class="modal-content w-100">
-      <%= render "shared/connect-account" %>
-      <div class="container m-3">
+  <div id="modal-window" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg clear" role="document">
+      <div class="modal-content w-100">
+        <%= render "shared/connect-account" %>
+        <div class="container m-3">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="modal-settings" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg clear" role="document">
-    <div class="modal-content w-100">
-      <%= render "shared/user-settings" %>
-      <div class="container m-3">
+  <div id="modal-settings" class="modal hide fade w-100" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg clear" role="document">
+      <div class="modal-content w-100">
+        <%= render "shared/user-settings" %>
+        <div class="container m-3">
+        </div>
       </div>
     </div>
   </div>
+  <%= render 'shared/footer' %>
 </div>
-<%= render 'shared/footer' %>

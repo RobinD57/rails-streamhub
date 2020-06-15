@@ -1,22 +1,8 @@
-const fetchFollowsIndexCardsSortedByAlpha = () => {
-  const alpha_filter = document.querySelector(".alpha-filter")
-  if (alpha_filter) {
-    alpha_filter.addEventListener("click",() => {
-       fetch(`/dashboard/sorted_collection?sort=alpha`, {
-      method: 'GET',
-      }).then(response => response.text())
-        .then((html) => {
-          document.querySelector(".reloading-area").innerHTML = html;
-      });
-    });
-  };
-}
-
-const fetchFollowsIndexCardsSortedByViewers = () => {
-  const viewers_filter = document.querySelector(".viewers-filter")
+const fetchFollowsIndexCardsSorted = (btnClassName, sortType) => {
+  const viewers_filter = document.querySelector(btnClassName)
   if (viewers_filter) {
     viewers_filter.addEventListener("click",() => {
-      fetch(`/dashboard/sorted_collection?sort=views`, {
+      fetch(`/dashboard/sorted_collection?sort=${sortType}`, {
       method: 'GET',
       }).then(response => response.text())
         .then((html) => {
@@ -27,8 +13,8 @@ const fetchFollowsIndexCardsSortedByViewers = () => {
 }
 
 const underlineSort = () => {
- const elements = document.querySelectorAll(".sort-btn")
- if (elements) {
+  const elements = document.querySelectorAll(".sort-btn")
+  if (elements) {
     elements.forEach((btn) => btn.addEventListener("click",(e) => {
       elements.forEach((ele) => ele.classList.remove("underline"));
       e.currentTarget.classList.toggle("underline");
@@ -36,6 +22,4 @@ const underlineSort = () => {
   };
 }
 
-
-export { fetchFollowsIndexCardsSortedByAlpha, fetchFollowsIndexCardsSortedByViewers,
-underlineSort };
+export { fetchFollowsIndexCardsSorted, underlineSort };

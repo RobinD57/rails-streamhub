@@ -1,6 +1,6 @@
 .sort {
   // width: 15%;
-  right: 7.3%;
+  right: 7.8%;
   position: absolute;
 }
 
@@ -16,6 +16,7 @@
   text-decoration: none !important;
   cursor: pointer;
   opacity: 1;
+  background-color: transparent !important;
 }
 
 .sort a:hover, .sort a:visited, .sort a:link, .sort a:active{

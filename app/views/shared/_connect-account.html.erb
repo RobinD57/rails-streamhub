@@ -3,9 +3,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
   <div class="auth-title">
-    <%= link_to  root_path do  %>
     <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
-    <% end %>
     <h5>Link your accounts</h5>
   </div>
 
@@ -34,7 +32,7 @@
     </div>
 
     <div class="logo-button">
-      <%= image_tag('facebook-gaming-logo.svg', size: '70x70') %>
+      <%= image_tag('dlive.svg', size: '70x70') %>
       <% if has_provider?(current_user, "dlive") %>
         <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
       <% else %>

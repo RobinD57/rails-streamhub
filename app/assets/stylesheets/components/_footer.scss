@@ -1,4 +1,10 @@
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
 .footer {
+  position: absolute;
   background: transparent;
   display: flex;
   align-items: center;
@@ -6,6 +12,20 @@
   height: 50px;
   color: rgba(0,0,0,0.3);
   border-top: 1px solid rgba(215, 215, 215, 0.15) !important;
+  width: 100%;
+}
+
+.footer-dash {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  color: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(215, 215, 215, 0.15) !important;
+  width: 100%;
 }
 
 .footer-links {
