@@ -20,6 +20,7 @@ class FollowsController < ApplicationController
   def dlive
     Identity.create!(provider: "dlive", uid: rand(1..50000), user: current_user)
     DliveRetreiverService.new(username: current_user.username)
+    redirect_back(fallback_location: root_path)
   end
 
   private
