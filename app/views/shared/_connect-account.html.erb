@@ -23,7 +23,7 @@
     <div class="logo-button">
       <%= image_tag('MixerMerge_Dark.svg', size: '70x70') %>
       <% if has_provider?(current_user, "mixer") %>
-        <button type="button" class="btn btn-primary">connected <i class="fas fa-check"></i></button>
+        <%=button_to 'Delete', { controller: :identities, action: 'destroy', id: current_user.identities.find_by(provider: "mixer").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary" %>
       <% else %>
         <%= link_to user_mixer_omniauth_authorize_path, class: "stream-button" do %>
           <button type="button" class="btn btn-primary">connect</button>
