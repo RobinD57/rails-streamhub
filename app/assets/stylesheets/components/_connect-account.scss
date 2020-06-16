@@ -70,4 +70,12 @@
   font-weight: 400;
 }
 
+.unlink-account {
+  color: red !important;
+}
 
+
+.blur {
+  opacity:0;
+  transition: all .5s ease;
+}
