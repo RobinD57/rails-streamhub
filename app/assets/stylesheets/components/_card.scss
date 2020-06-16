@@ -42,14 +42,13 @@ a:hover, a:visited, a:link, a:active{
   opacity: 1;
   visibility: visible;
   transition: all .5s ease;
-
 }
 
-.main-card:hover .viewer-count  {
+.main-card:hover .viewer-count {
   z-index: 1050;
 }
 
-.main-card:hover .blur{
+.main-card:hover .blur {
   opacity:0;
   transition: all .5s ease;
 }
