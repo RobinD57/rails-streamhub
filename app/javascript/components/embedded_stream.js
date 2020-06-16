@@ -12,10 +12,10 @@ const initEmbeddedStream = () => {
         if (embedWrapper.dataset.source === "mixer") {
           iframe.src = `https://mixer.com/embed/player/${embedWrapper.dataset.streamer}?disableLowLatency=1`;
         } else if (embedWrapper.dataset.source === "twitch") {
-          iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=streamhub.watch`;
+          iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=www.streamhub.watch`;
         }
         embedWrapper.style.display = "block";
-      }, 2000);
+      }, 7000);
     }));
     cards.forEach((card) => card.addEventListener("mouseleave", (event) => {
       setTimeout(function() {
