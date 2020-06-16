@@ -1,11 +1,12 @@
 let frame;
 let iframe;
+let timer;
 
 const initEmbeddedStream = () => {
   const cards = document.querySelectorAll(".main-card");
   if (cards) {
     cards.forEach((card) => card.addEventListener("mouseenter", (event) => {
-      setTimeout(function() {
+      timer = setTimeout(function() {
         const embedWrapper = card.querySelector(".embedWrapper");
         const iframe = embedWrapper.querySelector("iframe");
         if (embedWrapper.dataset.source === "mixer") {
@@ -14,13 +15,16 @@ const initEmbeddedStream = () => {
           iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=streamhub.watch`;
         }
         embedWrapper.style.display = "block";
-      }, 3000);
+      }, 2000);
     }));
     cards.forEach((card) => card.addEventListener("mouseleave", (event) => {
+      setTimeout(function() {
       const embedWrapper = card.querySelector(".embedWrapper");
       const iframe = embedWrapper.querySelector("iframe");
       iframe.src = "";
       embedWrapper.style.display = "none";
+      clearTimeout(timer);
+      }, 300);
     }));
   }
 }
