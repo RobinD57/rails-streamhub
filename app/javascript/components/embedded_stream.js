@@ -15,7 +15,7 @@ const initEmbeddedStream = () => {
           iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=streamhub.watch`;
         }
         embedWrapper.style.display = "block";
-      }, 2000);
+      }, 7000);
     }));
     cards.forEach((card) => card.addEventListener("mouseleave", (event) => {
       setTimeout(function() {
