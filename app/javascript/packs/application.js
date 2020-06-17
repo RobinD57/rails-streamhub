@@ -36,13 +36,14 @@ import { fetchFollowsIndexCardsSorted } from '../components/sort';
 import { underlineSort } from '../components/sort';
 import { closeNav } from '../components/navbar';
 import { initEmbeddedStream } from '../components/embedded_stream';
-
+import { linkAccountButton } from '../components/link_account_button';
 import { firstSignUp } from '../components/first_sign_up';
 import { removeQueryParams } from '../components/remove_query_params';
 
 
 document.addEventListener('turbolinks:load', () => {
-  initEmbeddedStream()
+  initEmbeddedStream();
+  linkAccountButton();
   checkLoad();
   firstSignUp();
   removeQueryParams();

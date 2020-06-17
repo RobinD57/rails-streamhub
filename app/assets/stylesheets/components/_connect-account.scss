@@ -71,11 +71,6 @@
 }
 
 .unlink-account {
-  color: red !important;
-}
-
-
-.blur {
-  opacity:0;
-  transition: all .5s ease;
+  opacity: 0;
+  visibility: none;
 }
