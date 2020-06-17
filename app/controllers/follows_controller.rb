@@ -23,6 +23,12 @@ class FollowsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def smashcast
+    Identity.create!(provider: "smashcast", uid: rand(1..50000), user: current_user)
+    SmashcastFollowRetreiverService.new(username: current_user.username)
+    redirect_back(fallback_location: root_path)
+  end
+
   private
 
   def follows_params
