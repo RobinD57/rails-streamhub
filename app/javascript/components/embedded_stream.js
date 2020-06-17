@@ -3,29 +3,30 @@ let timer;
 const initEmbeddedStream = () => {
   const cards = document.querySelectorAll(".main-card");
   if (cards) {
-    cards.forEach((card) => card.addEventListener("mouseenter", (event) => {
-      console.log(event);
-      timer = setTimeout(function() {
-        const embedWrapper = card.querySelector(".embedWrapper");
-        const iframe = embedWrapper.querySelector("iframe");
-        if (embedWrapper.dataset.source === "mixer") {
-          iframe.src = `https://mixer.com/embed/player/${embedWrapper.dataset.streamer}?disableLowLatency=1`;
-        } else if (embedWrapper.dataset.source === "twitch") {
-          iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=www.streamhub.watch`;
-        }
-        embedWrapper.style.display = "block";
-      }, 7000);
-    }));
-    cards.forEach((card) => card.addEventListener("mouseleave", (event) => {
-      console.log(event);
-      setTimeout(function() {
+    cards.forEach((card) => {
       const embedWrapper = card.querySelector(".embedWrapper");
-      const iframe = embedWrapper.querySelector("iframe");
-      iframe.src = "";
-      embedWrapper.style.display = "none";
-      clearTimeout(timer);
-      }, 300);
-    }));
+      const iframe = embedWrapper.querySelector("iframe");      let timer;      card.addEventListener(
+        "mouseenter",
+        (event) => {
+          timer = setTimeout(
+            () => {
+              if (embedWrapper.dataset.source === "mixer") {
+                iframe.src = `https://mixer.com/embed/player/${embedWrapper.dataset.streamer}?disableLowLatency=1`;
+              } else if (embedWrapper.dataset.source === "twitch") {
+                iframe.src = `https://player.twitch.tv/?channel=${embedWrapper.dataset.streamer}&muted=true&autoplay=true&parent=www.streamhub.watch`;
+              }
+              embedWrapper.style.display = "block";
+            },
+            7000
+          );
+        }
+      );
+      card.addEventListener("mouseleave", (event) => {
+        iframe.src = "";
+        embedWrapper.style.display = "none";
+        clearTimeout(timer);
+      });
+    });
   }
 }
 
