@@ -1,11 +1,10 @@
-let frame;
-let iframe;
 let timer;
 
 const initEmbeddedStream = () => {
   const cards = document.querySelectorAll(".main-card");
   if (cards) {
     cards.forEach((card) => card.addEventListener("mouseenter", (event) => {
+      console.log(event);
       timer = setTimeout(function() {
         const embedWrapper = card.querySelector(".embedWrapper");
         const iframe = embedWrapper.querySelector("iframe");
@@ -18,6 +17,7 @@ const initEmbeddedStream = () => {
       }, 7000);
     }));
     cards.forEach((card) => card.addEventListener("mouseleave", (event) => {
+      console.log(event);
       setTimeout(function() {
       const embedWrapper = card.querySelector(".embedWrapper");
       const iframe = embedWrapper.querySelector("iframe");
