@@ -14,7 +14,7 @@
       <% if has_provider?(current_user, "twitch") %>
         <div class="connect-wrapper">
           <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
-          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "mixer").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
+          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "twitch").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
         </div>
       <% else %>
         <%= link_to user_twitch_omniauth_authorize_path, class: "stream-button" do %>
@@ -42,7 +42,7 @@
       <% if has_provider?(current_user, "dlive") %>
         <div class="connect-wrapper">
           <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
-          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "mixer").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
+          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "dlive").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
         </div>
       <% else %>
         <%= link_to dashboard_dlive_path, method: :post, class: "stream-button" do %>
@@ -56,7 +56,7 @@
       <% if has_provider?(current_user, "youtube") %>
         <div class="connect-wrapper">
           <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
-          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "mixer").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
+          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "youtube").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
         </div>
       <% else %>
         <%= link_to user_google_oauth2_omniauth_authorize_path, class: "stream-button" do %>
