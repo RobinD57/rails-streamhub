@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :follows, only: [:index, :create, :destroy, :update], path: "dashboard"
   get "dashboard/sorted_collection", to: "follows#sorted_collection"
   post "dashboard/dlive", to: "follows#dlive"
+  post "dashboard/smashcast", to: "follows#smashcast"
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :follows, only: [ :index ]
