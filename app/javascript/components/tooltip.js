@@ -1,10 +1,13 @@
+import tippy from 'tippy.js';
 
 const showToolTip = () => {
-  const tooltipQuestion = document.querySelector("#question-mark");
-  tooltipQuestion.tooltip("data-animation=true");
-  tooltipQuestion.addEventListener("hover", ((event) => {
-    tooltipQuestion.tooltip("show");
-  }));
+  const uname = document.querySelector("#question-mark").dataset.uname
+  tippy('#question-mark', {
+    content: `Dlive will <strong>only</strong> connect accounts which have a username of: ${uname}` ,
+    animation: 'shift-away',
+    allowHTML: true,
+    placement: "right"
+  });
 };
 
 export { showToolTip };

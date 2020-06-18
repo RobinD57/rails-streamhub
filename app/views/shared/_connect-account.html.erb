@@ -47,14 +47,14 @@
               <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "dlive").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden; margin-left: 60px;" %>
             </div>
           </div>
-          <i id="question-mark" data-toggle="tooltip" data-placement="top" title="Dlive will only connect accounts which have usernames consistent to your initial sign up username" class="fas fa-question-circle"></i>
+          <i id="question-mark" data-uname= "<%= current_user.username %>" class="fas fa-question-circle"></i>
         </div>
       <% else %>
       <div class="d-flex">
         <%= link_to dashboard_dlive_path, method: :post, class: "stream-button" do %>
           <button type="button" style="margin-left: 60px;" class="btn btn-primary">connect</button>
         <% end %>
-        <i id="question-mark" data-toggle="tooltip" data-placement="top" title="Dlive will only connect accounts which have usernames consistent to your initial sign up username" class="fas fa-question-circle mt-3"></i>
+        <i id="question-mark" data-uname= "<%= current_user.username %>" class="fas fa-question-circle"></i>
       </div>
       <% end %>
     </div>
