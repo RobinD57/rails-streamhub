@@ -2,14 +2,14 @@
   <button type="button" id= "close-btn" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-  <div class="auth-title">
+  <div class="auth-title pt-4">
     <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
     <h5>Link your accounts</h5>
   </div>
 
   <div class="social-icons">
 
-    <div class="logo-button">
+    <div class="logo-button pt-2">
       <%= image_tag('TwitchGlitchPurple.svg', size: '70x70') %>
       <% if has_provider?(current_user, "twitch") %>
         <div class="connect-wrapper">
@@ -40,28 +40,22 @@
     <div class="logo-button">
       <%= image_tag('dlive.svg', size: '70x70') %>
       <% if has_provider?(current_user, "dlive") %>
-        <div class="connect-wrapper">
-          <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
-          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "dlive").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
+        <div class="d-flex">
+          <div class="connect-wrapper">
+            <button type="button" class="btn btn-primary linked-button" style="position: fixed; margin-left: 60px;">connected <i class="fas fa-check"></i> </button>
+            <div class="d-flex">
+              <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "dlive").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden; margin-left: 60px;" %>
+            </div>
+          </div>
+          <i id="question-mark" data-uname= "<%= current_user.username %>" class="fas fa-question-circle"></i>
         </div>
       <% else %>
+      <div class="d-flex">
         <%= link_to dashboard_dlive_path, method: :post, class: "stream-button" do %>
-          <button type="button" class="btn btn-primary">connect</button>
+          <button type="button" style="margin-left: 60px;" class="btn btn-primary">connect</button>
         <% end %>
-      <% end %>
-    </div>
-
-    <div class="logo-button">
-      <%= image_tag('smashcast.png', size: '80x80') %>
-      <% if has_provider?(current_user, "smashcast") %>
-        <div class="connect-wrapper">
-          <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
-          <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "smashcast").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
-        </div>
-      <% else %>
-        <%= link_to dashboard_smashcast_path, method: :post, class: "stream-button" do %>
-          <button type="button" class="btn btn-primary">connect</button>
-        <% end %>
+        <i id="question-mark" data-uname= "<%= current_user.username %>" class="fas fa-question-circle"></i>
+      </div>
       <% end %>
     </div>
   </div>
