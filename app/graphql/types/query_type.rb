@@ -1,13 +1,17 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :follows,
+          [Types::FollowType],
+          null: false,
+          description: "Returns a list of all your follows"
+    field :identities, [Types::IdentityType], null: false
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def follows
+      current_user.identities.map { |identity| Follow.where(identity_id: identity.id) }.flatten
+    end
+
+    def identities
+      current_user.identities
     end
   end
 end
