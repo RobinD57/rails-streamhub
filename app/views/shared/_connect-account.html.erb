@@ -2,14 +2,14 @@
   <button type="button" id= "close-btn" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-  <div class="auth-title pt-4">
+  <div class="auth-title pt-2">
     <img src="https://res.cloudinary.com/dwtuoc2xm/image/upload/v1591093402/white_logo_transparent_background_uqnxhu.png" alt="Streamhub" class="form-logo-small">
     <h5>Link your accounts</h5>
   </div>
 
   <div class="social-icons">
 
-    <div class="logo-button pt-2">
+    <div class="logo-button pt-4">
       <%= image_tag('TwitchGlitchPurple.svg', size: '70x70') %>
       <% if has_provider?(current_user, "twitch") %>
         <div class="connect-wrapper">
