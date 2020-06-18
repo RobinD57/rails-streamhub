@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "popper.js";
 
 
 // Internal imports, e.g:
@@ -39,6 +40,7 @@ import { initEmbeddedStream } from '../components/embedded_stream';
 import { linkAccountButton } from '../components/link_account_button';
 import { firstSignUp } from '../components/first_sign_up';
 import { removeQueryParams } from '../components/remove_query_params';
+import { showToolTip } from '../components/tooltip';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -54,5 +56,6 @@ document.addEventListener('turbolinks:load', () => {
   fetchFollowsIndexCardsSorted(".views-filter", "views");
   underlineSort();
   closeNav();
+  showToolTip();
 });
 
