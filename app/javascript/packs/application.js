@@ -26,7 +26,6 @@ require("channels")
 import "bootstrap";
 import "popper.js";
 
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { toggleCaret } from '../components/navbar';

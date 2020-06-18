@@ -8,7 +8,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "animate";
-@import 'tippy.js/dist/tippy.css';
+@import "tippy.js/dist/tippy.css";
+@import 'tippy.js/animations/scale.css';
+@import 'tippy.js/themes/light.css';
 
 // Your CSS partials
 @import "components/index";
