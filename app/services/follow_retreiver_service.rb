@@ -58,6 +58,11 @@ class FollowRetreiverService
     follow_details = DliveRetreiverService.new(@identity.user.username).perform
   end
 
+  def smashcast
+    follow_details = SmashcastFollowRetreiverService.new(@identity.user.username).perform
+  end
+
+
   def twitch_refresh_access_token
     refresh_token = Identity.find(@identity.id).refresh_token
     new_access_token = TwitchRefreshAccessTokenService.new(refresh_token: refresh_token).perform

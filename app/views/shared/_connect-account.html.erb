@@ -52,14 +52,14 @@
     </div>
 
     <div class="logo-button">
-      <%= image_tag('YouTube.svg', size: '70x70') %>
-      <% if has_provider?(current_user, "youtube") %>
+      <%= image_tag('smashcast.png', size: '80x80') %>
+      <% if has_provider?(current_user, "smashcast") %>
         <div class="connect-wrapper">
           <button type="button" class="btn btn-primary linked-button" style="position: fixed;">connected <i class="fas fa-check"></i></button>
           <%= button_to "Unlink", { controller: :identities, action: "destroy", id: current_user.identities.find_by(provider: "youtube").id }, method: :delete, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "btn btn-primary unlink-account", style: "visibility: hidden;" %>
         </div>
       <% else %>
-        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "stream-button" do %>
+        <%= link_to dashboard_smashcast_path, method: :post, class: "stream-button" do %>
           <button type="button" class="btn btn-primary">connect</button>
         <% end %>
       <% end %>
