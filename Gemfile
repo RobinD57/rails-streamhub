@@ -45,6 +45,7 @@ gem 'rest-client'
 gem 'animate.css-rails', '~> 3.2.0'
 gem 'simple_token_authentication'
 gem 'sprockets', '~> 3.7.2'
+gem 'graphql'
 
 
 group :development, :test do
@@ -77,3 +78,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
