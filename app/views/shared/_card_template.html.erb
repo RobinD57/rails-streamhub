@@ -20,7 +20,11 @@
             <p id="stream-title" class='shadowed'>
               <%= follow.stream_title.length > 35 ? follow.stream_title.first(35) + "..." : follow.stream_title %>
             </p>
-            <i id="" class="text-center shadowed fab fa-<%=provider%> provider-icon"></i>
+            <% if provider == "twitch" || provider == "mixer" %>
+              <i id="" class="text-center shadowed fab fa-<%=provider%> provider-icon"></i>
+            <% else %>
+              <img src="dlive-icon.png" alt="Logo of Dlive" width="76" height="71">
+            <% end %>
           </div>
           <h5 id="streamer-name-pop-up" class="text-left ml-2 shadowed pt-3"> <%= follow.streamer_name  %> </h5>
           <p id="streamer-game-pop-up" class="text-left ml-2 shadowed game"> <%= follow.game_title  %></p>

@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="row sorted">
       <%  @follows.each do |follow| %>
-        <% if follow.identity.provider == "twitch" %>
+        <% if follow.identity.provider == "twitch" || follow.identity.provider == "dlive" %>
           <%= render "shared/card_template", :follow => follow,
                                              :provider => follow.identity.provider,
                                              :provider_url => follow.identity.provider + ".tv" %>
