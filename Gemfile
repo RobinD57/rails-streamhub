@@ -46,6 +46,7 @@ gem 'animate.css-rails', '~> 3.2.0'
 gem 'simple_token_authentication'
 gem 'sprockets', '~> 3.7.2'
 gem 'graphql'
+gem 'data-confirm-modal'
 
 
 group :development, :test do
